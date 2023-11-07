@@ -1,0 +1,159 @@
+.about-page {
+  margin: 0;
+  padding: 0;
+  z-index: 3;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 10em;
+  margin-top: 5em;
+  text-align: justify;
+  align-items: center;
+}
+
+.text-container img {
+  margin: auto;
+  max-width: 60%; 
+}
+
+.text-container h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 5em;
+  letter-spacing: 2px;
+  color: var(--base);
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container h3 {
+}
+
+.text-container p {
+  font-size: 1.2em;
+  margin: 1.5em;
+  text-align: justify;
+  line-height: 2em;
+}
+
+.text-container .remark-quote {
+  color: var(--base);
+  border: 5px solid var(--secondary);
+  padding: 2em 2em;
+  font-weight: 800;
+  border-radius: 15px;
+}
+
+/* Gallery */
+
+.wrapper-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 20em 20em;
+  gap: 10px;
+  grid-template-areas:
+    "img1 img2 img3 img4"
+    "img5 img6 img7 img8"
+    "img1 img2 img3 img4"
+    "img1 img2 img3 img4";
+  padding-top: 10em;
+  animation: opacity 2s;
+  place-items: center;
+}
+
+.wrapper-gallery.active {
+  display: grid;
+}
+
+#index-gallery .gallery-img {
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+
+#index gallery p {
+  grid-area: gallery-p;
+}
+#index gallery h2 {
+  grid-area: gallery-h2;
+}
+
+#index-gallery .img1 {
+  /* grid-area: img1;   */
+  background-image: url("https://res.cloudinary.com/dhbvri4ni/image/upload/v1679064525/planeta-precios-bajos-e-commerce/Sucursal/Imagen_de_WhatsApp_2023-03-15_a_las_17.38.413_ahija8.jpg");
+}
+#index-gallery .img2 {
+  /* grid-area: img1;   */
+  background-image: url("https://res.cloudinary.com/dhbvri4ni/image/upload/v1679064527/planeta-precios-bajos-e-commerce/Sucursal/Imagen_de_WhatsApp_2023-03-15_a_las_17.38.27_kbsex5.jpg");
+}
+#index-gallery .img3 {
+  /* grid-area: img1;   */
+  background-image: url("https://res.cloudinary.com/dhbvri4ni/image/upload/v1679064528/planeta-precios-bajos-e-commerce/Sucursal/Imagen_de_WhatsApp_2023-03-15_a_las_17.38.272_tx4pdg.jpg");
+}
+#index-gallery .img4 {
+  /* grid-area: img1;   */
+  background-image: url("https://res.cloudinary.com/dhbvri4ni/image/upload/v1679064529/planeta-precios-bajos-e-commerce/Sucursal/Imagen_de_WhatsApp_2023-03-15_a_las_17.38.414_ru3l2m.jpg");
+}
+#index-gallery .img5 {
+  /* grid-area: img1;   */
+  background-image: url("https://res.cloudinary.com/dhbvri4ni/image/upload/v1679064531/planeta-precios-bajos-e-commerce/Sucursal/Imagen_de_WhatsApp_2023-03-15_a_las_17.38.26_kgqscx.jpg");
+}
+#index-gallery .img6 {
+  /* grid-area: img1;   */
+  background-image: url("https://res.cloudinary.com/dhbvri4ni/image/upload/v1679064532/planeta-precios-bajos-e-commerce/Sucursal/Imagen_de_WhatsApp_2023-03-15_a_las_17.38.271_cmnxlv.jpg");
+}
+
+.final-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10em auto;
+  max-width: 10%;
+}
+
+/* Responsive  */
+@media (max-width: 906px) {
+  .about-page {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin-top: 2em;
+  }
+
+  .text-container img {
+    display: none;
+  }
+
+  .text-container {
+    margin: 0 1em;
+    text-align: center;
+  }
+
+  .text-container h1 {
+    font-size: 1.5em;
+  }
+
+  .text-container p {
+    font-size: 1em;
+    margin: 1.5em;
+    text-align: justify;
+    line-height: 2em;
+  }
+
+  .text-container .remark-quote {
+    color: var(--base);
+    border: 5px solid var(--secondary);
+    padding: 2em 2em;
+    font-weight: 800;
+    border-radius: 15px;
+  }
+
+  .wrapper-gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}

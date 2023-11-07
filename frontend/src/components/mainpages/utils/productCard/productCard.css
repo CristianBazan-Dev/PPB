@@ -1,0 +1,137 @@
+.product-card-item {
+  display: flex;
+  width: 203px;
+  height: 297px;
+  background: var(--white);
+  margin: 1em;
+}
+
+.product-card-item .container {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  position: relative;
+}
+
+.product-card-item .container .brand {
+  color: #000;
+  font-family: Open Sans;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.product-card-item .container img {
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.product-card-item .container .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.product-card-item .container .info .title {
+  width: 100%;
+  color: #000;
+  font-family: "Open Sans";
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  margin: 0;
+}
+.product-card-item .container .info .full-price {
+  color: var(--Main, #25275e);
+  font-family: "Open Sans";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.product-card-item .container .info .dues {
+  color: #000;
+  font-family: Open Sans;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* Button  */
+
+.product-card-item .container .product-card-button svg {
+  stroke: var(--white);
+  margin-right: 1em;
+}
+
+.product-card-item .container .product-card-button {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  height: 43px;
+  align-items: center;
+  flex-shrink: 0;
+  background: var(--base);
+  color: var(--Light, #e9e9e9);
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.product-card-item .container .product-card-button:hover {
+  background: var(--secondary);
+  transition: 0.5s;
+}
+
+.product-card-item .container .double-btn {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  height: 43px;
+  align-items: center;
+  flex-shrink: 0;
+  font-family: Open Sans;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  position: absolute;
+  bottom: 0;
+  cursor: pointer;
+}
+
+.product-card-item .container .double-btn > .edit-btn, .delete-btn{
+  padding: 10px 20px;
+  margin-bottom: 1em;
+}
+
+.product-card-item .container .double-btn .edit-btn{
+  background: #25275e;
+  color: var(--white);
+}
+
+.product-card-item .container .double-btn .edit-btn:hover{
+  background: #7176f8;
+  transition: .3s ;
+}
+
+.product-card-item .container .double-btn .delete-btn{
+  background: #f03737;
+  color: var(--white);
+}
+
+.product-card-item .container .double-btn .delete-btn:hover{
+  background: #f07272;
+  transition: .3s ;
+}

@@ -1,0 +1,41 @@
+
+.loading-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    animation: pulse 1.5s infinite alternate;
+}
+
+.loading-container img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+   
+}
+
+.loading-container h1{
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+    margin-left: 1em;
+    color: var(--base);
+}
+
+
+@keyframes pulse {
+    0%{
+        opacity: 0; 
+    }
+    100%{
+        opacity: 1; 
+    }
+}
+
+@keyframes rotate{
+    50%{transform: rotate(80deg);}
+    100%{transform: rotate(360deg);}
+}

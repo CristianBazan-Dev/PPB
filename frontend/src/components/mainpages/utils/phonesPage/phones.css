@@ -1,0 +1,179 @@
+.phones-page {
+  margin-top: 0;
+}
+
+.phones-products-page {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  margin-top: -10em;
+}
+
+.phones-page h1 {
+  display: flex;
+  justify-content: start;
+  font-weight: bold;
+  margin-left: 2em;
+}
+
+.logo-phones-page img {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 100%;
+  max-width: 50px;
+  z-index: 3;
+  animation: planetCurse 10s infinite alternate ease-in-out,
+    changingPos 10s alternate infinite 0.5s;
+}
+
+@keyframes planetCurse {
+  from {
+    top: 20%;
+    left: 35%;
+    opacity: 0;
+  }
+
+  to {
+    top: 40%;
+    left: 60%;
+    opacity: 1;
+    z-index: 1;
+  }
+}
+
+@keyframes changingPos {
+  from {
+    z-index: 0;
+  }
+  to {
+    z-index: 5;
+  }
+}
+
+.phones-products {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.phones-products .carousel-inner .carousel-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+  margin-left: 27%;
+  width: 50%;
+  z-index: 2;
+}
+.phones-products .carousel-inner .carousel-item h1 {
+  margin: auto;
+  display: flex;
+  position: absolute;
+  top: 70%;
+}
+
+.phones-page .carousel-contain {
+  max-width: 100%;
+  margin-top: -15em;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../offerProducts/Bg\ Products\ -\ Universe\ -\ long.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+.phones-page .carousel-container {
+  width: 100%;
+  padding: 150px;
+  z-index: 2;
+}
+
+/* phones img animation  */
+
+@keyframes phonesFloating {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+/* Phones product */
+
+@keyframes phoneAppear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1027px) {
+  .phones-page h1 {
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+
+  .phones-page .carousel-contain {
+    max-width: 100%;
+    margin-top: -8em;
+  }
+}
+
+@media (max-width: 768px) {
+  .phones-page {
+    margin-top: 5em;
+  }
+
+  .logo-phones-page img {
+    max-width: 20px;
+  }
+
+  .phones-products .carousel-inner .carousel-item h1 {
+    font-size: 1.2em;
+  }
+
+  .phones-page h1 {
+    justify-content: center;
+    margin-bottom: 4em;
+    font-size: 1.7em;
+    text-align: center;
+    margin-left: 0;
+  }
+
+  .phones-page .carousel-contain {
+    max-width: 100%;
+    background-size: 100% 80%;
+  }
+
+  .phones-page .carousel-container {
+    width: 100%;
+    height: 400px;
+    padding: 60px;
+    z-index: 2;
+    margin-top: 5em;
+  }
+
+  .phones-page .react-multi-carousel-track {
+    margin-top: -6em;
+  }
+
+  .phones-page .carousel-container button {
+    margin-top: -5em;
+  }
+
+  .phones-page .button-see-more{
+    margin-top: -3em;
+
+  }
+
+  .phones-page .button-see-more button{
+    z-index: 200;
+  }
+
+  
+}

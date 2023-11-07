@@ -1,0 +1,65 @@
+.stores-page {
+}
+
+.principal-store,
+.store {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  margin: 2em 2em;
+  border-radius: 15px;
+  background: var(--lightBlue);
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  flex-direction: column;
+}
+
+.stores-page h1 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  color: var(--secondary);
+  font-size: 3em;
+}
+
+.stores-page h2 {
+  color: lightgray;
+}
+
+@media (max-width: 906px) {
+  .stores-page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .principal-store,
+  .store {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .principal-store .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .principal-store h3{
+    font-size: 1.1em;
+  }
+  .map {
+    align-items: center;
+    margin: auto;
+  }
+  .map iframe {
+    width: 200px;
+    height: 200px;
+  }
+}

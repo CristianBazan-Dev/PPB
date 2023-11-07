@@ -1,0 +1,125 @@
+.popular-categories-section {
+  width: 100%;
+  background-color: var(--light);
+}
+
+.popular-categories-section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5em;
+}
+
+.popular-categories-section .content h3 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  margin-top: 2em;
+}
+
+.popular-categories-section .content .categories-circles {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.popular-categories-section .content .categories-circles .category-item {
+  display: flex;
+  margin: 2em 4em;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.popular-categories-section
+  .content
+  .categories-circles
+  .category-item
+  .presentation {
+  background: var(--base);
+  border-radius: 50%;
+  width: 123px;
+  height: 122px;
+  position: relative;
+  cursor: pointer;
+}
+
+.popular-categories-section .content .categories-circles .category-item img {
+  position: absolute;
+}
+
+.popular-categories-section
+  .content
+  .categories-circles
+  .category-item:nth-child(1)
+  img {
+  top: 35%;
+}
+.popular-categories-section
+  .content
+  .categories-circles
+  .category-item:nth-child(2)
+  img {
+  top: 30%;
+}
+.popular-categories-section
+  .content
+  .categories-circles
+  .category-item:nth-child(3)
+  img {
+  top: 32%;
+}
+.popular-categories-section
+  .content
+  .categories-circles
+  .category-item:nth-child(4)
+  img {
+  top: 35%;
+}
+.popular-categories-section
+  .content
+  .categories-circles
+  .category-item:nth-child(5)
+  img {
+  top: 35%;
+}
+
+.popular-categories-section .content .categories-circles .category-item h3 {
+  margin-top: 1em;
+}
+
+@media (max-width: 768px) {
+  .popular-categories-section {
+    width: 100%;
+  }
+
+  .popular-categories-section h3 {
+    font-family: "Oswald", sans-serif;
+    font-weight: bold;
+    margin-top: 2em;
+    font-size: 1em;
+  }
+
+  .popular-categories-section
+    .content
+    .categories-circles
+    .category-item
+    .presentation {
+    width: 100px;
+    height: 100px;
+  }
+
+  .popular-categories-section .content .categories-circles .category-item img {
+    max-width: 70px;
+  }
+
+  .popular-categories-section .content .categories-circles {
+  }
+  .popular-categories-section .content .categories-circles a .category-item {
+    margin: 1em 1em;
+  }
+
+  .popular-categories-section .content .categories-circles .category-item img {
+  
+  }
+}

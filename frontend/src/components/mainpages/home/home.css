@@ -1,0 +1,513 @@
+/* scroll */
+.home{
+  background: var(--light);
+}
+.reveal {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: all 2s ease;
+}
+
+.reveal.active {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* ---------- Product Item -------- */
+@import url("../utils/productItem/productItem.css");
+
+.delete-all {
+  position: absolute;
+  right: 2em;
+}
+.delete-all input {
+  height: 25px;
+  width: 20px;
+  transform: translateY(5px);
+  margin: 0 15px;
+}
+.delete-all span {
+  text-transform: uppercase;
+  color: rgb(3, 165, 206);
+  letter-spacing: 1.3px;
+  font-size: 0.9em;
+}
+.delete-all button {
+  border: 1px solid crimson;
+  padding: 5px 25px;
+  color: crimson;
+  text-transform: uppercase;
+}
+
+/* ---------- Filters Menu -------- */
+
+.filter-responsive-menu {
+  display: none;
+}
+
+.row {
+  display: none;
+}
+
+.row select {
+  border-radius: 100px;
+  padding: 1px;
+  outline: none;
+  font-size: 13px;
+}
+
+.row span,
+.row option {
+  font-size: 0.8em;
+}
+
+.row select:focus {
+  box-shadow: 0 0 3pt 2pt #719ece;
+}
+
+/* Category gallery */
+.cat-gallery-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5em;
+}
+
+.cat-gallery {
+}
+
+.cat-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+  margin-left: 1.3em;
+}
+
+.cat-slide input[type="radio"] {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.cat-slide img {
+  width: 150px;
+  cursor: pointer;
+  animation: bright 10s infinite alternate;
+}
+
+@keyframes bright {
+  0% {
+    filter: none;
+    transform: none;
+  }
+  100% {
+    filter: brightness(1.3);
+    transform: scale(1.2);
+  }
+}
+
+@keyframes scaling {
+  0% {
+  }
+  100% {
+  }
+}
+
+.cat-slide img:hover {
+  transform: scale(1.2);
+}
+
+.cat-slide img:hover {
+}
+
+.cat-slide h3 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  color: var(--base);
+  font-size: 1em;
+  margin: auto;
+  z-index: 12;
+}
+
+.animated-container {
+  position: absolute;
+  bottom: 6em;
+  margin-right: 8em;
+  display: none;
+  opacity: 0;
+}
+
+/* Filters */
+.filter-menu {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff56;
+  width: 15%;
+  position: absolute;
+  margin-top: 7em;
+}
+
+.filter-menu.active {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 15px;
+  animation: shadowCard 500ms;
+}
+
+.filtring {
+  fill: var(--base);
+  margin: 2em;
+}
+
+.filtring-options {
+  display: none;
+  opacity: 0;
+}
+
+.filtring-options.active {
+  display: block;
+  opacity: 1;
+}
+
+.filtring-options .title {
+  margin-bottom: 1em;
+}
+
+.sort {
+  margin-left: 2em;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.sort h3 {
+  font-family: "Oswald", sans-serif;
+  cursor: pointer;
+  letter-spacing: 1px;
+}
+
+.title .bars {
+  transition: transform 250ms;
+}
+
+.title .bars.active {
+  transform: rotate(180deg);
+  transition: transform 250ms;
+}
+
+.sort-container,
+.categories-container {
+  display: none;
+  flex-direction: column;
+  padding: 0 20px;
+  opacity: 0;
+}
+
+.sort-container.active,
+.categories-container.active {
+  display: flex;
+  opacity: 1;
+  transition: opacity 1s;
+}
+
+.sort-container button,
+.categories-container button {
+  display: flex;
+  align-items: center;
+  font-size: 0.9em;
+  align-items: center;
+  text-align: left;
+  margin: 0.5em;
+  margin-left: -2em;
+  padding: 8px 20px;
+  color: var(--base);
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  border: 1px solid var(--base);
+  border-radius: 15px;
+}
+
+.sort-container button {
+  border: 1px solid var(--secondary);
+}
+
+.sort-container button:hover,
+.categories-container button:hover {
+  background: var(--base);
+  color: #fff;
+  border: 1px solid #fff;
+  transition: background 500ms, color 500ms, border 500ms;
+}
+
+.sort-container button:hover {
+  background: var(--secondary);
+}
+
+.subcategories-menu button {
+  margin-left: 2em;
+  margin-bottom: 0.1rem;
+  padding: 6px 15px;
+  color: var(--secondary);
+  font-size: 0.7em;
+}
+
+.subcategories-menu button:hover {
+  color: #fff;
+  background: var(--secondary);
+}
+
+/* Trend products  */
+
+.products-secondary {
+  grid-template-columns: repeat(auto-fill, minmax(270px, 200px));
+  padding-top: 22em;
+  padding-left: 4em;
+}
+
+.products-trend-blob {
+  position: absolute;
+  margin-top: -5em;
+  z-index: 0;
+}
+
+.trend-title {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  color: #fff;
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  animation: floatAnimation 5s infinite alternate ease-in-out;
+  z-index: 3;
+  position: relative;
+  top: 4em;
+  right: 2em;
+  font-size: 5em;
+}
+
+/* ---------- Load More -------- */
+.load_more {
+  margin-left: 8em;
+  text-align: center;
+}
+.load_more button {
+  cursor: pointer;
+  align-items: center;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #16437e;
+  outline: 1px solid #16437e;
+  cursor: pointer;
+  display: flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  width: 200px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-top: 1em;
+}
+
+/* Whatsapp  */
+/* .whatsapp-logo {
+  position: fixed;
+  bottom: 2em;
+  right: 2em;
+  cursor: pointer;
+}
+
+.whatsapp-logo.active {
+  width: 200px;
+  background: var(--base);
+  transition: 1s;
+  color: #fff;
+}
+
+.whatsapp-icon {
+  width: 80px;
+  fill: var(--base);
+} */
+
+.whatsapp-icon-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  align-items: center;
+  position: fixed;
+  right: 2em; 
+  bottom: 2em;
+  z-index: 10;
+}
+
+.whatsapp-icon-container svg {
+  fill: var(--base);
+  stroke: #fff;
+  stroke-width: .3px;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  z-index: 300;
+}
+
+.whatsapp-icon-container:hover svg {
+  filter: saturate(1);
+  stroke-width: 0.3;
+  stroke: var(--base);
+  transition: 0.5s;
+}
+
+.whatsapp-icon-container:hover .deploy-msg-wpp {
+  display: flex;
+  transition: 1s;
+  animation: wpp-msg 0.5s;
+}
+
+.whatsapp-icon-container .deploy-msg-wpp {
+  background-color: var(--base);
+  stroke: #fff;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 65px;
+  z-index: 1;
+  color: var(--light);
+  padding: 10px;
+  border-radius: 15px 0 0 15px;
+  margin-right: -0.8em;
+  outline: 0.3px solid var(--base);
+}
+
+@keyframes wpp-msg {
+  0% {
+    margin-right: -3em;
+    opacity: 0;
+  }
+
+  100% {
+    margin-right: -0.8em;
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+
+@media (max-width: 906px) {
+  .cat-gallery-container {
+    display: none;
+  }
+
+  .filter_menu input {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    width: 100px;
+  }
+
+  .filter-menu {
+    display: none;
+  }
+
+  .filter-responsive-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    margin: 2em;
+    max-width: 200px;
+  }
+
+  .row {
+    display: none;
+    margin: 0.3em;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+  }
+
+  .row h3 {
+    display: flex;
+    justify-content: center;
+  }
+
+  .row.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-left: 5em;
+    opacity: 1;
+    animation: appear 1s;
+  }
+
+  .row h3 {
+    font-size: 0.7e8;
+  }
+
+  .products {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    margin-top: -5em;
+  }
+
+  .delete-all {
+    display: none;
+  }
+}
+
+@media (max-width: 1027px) {
+}
+
+@media (max-width: 768px) {
+  .reveal {
+    position: relative;
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 2s ease;
+  }
+
+  .load_more {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .whatsapp-logo {
+   
+    display: none;
+  
+  }
+}

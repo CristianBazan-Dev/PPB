@@ -1,0 +1,154 @@
+.assist-section {
+}
+
+.assist-section .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+}
+
+.assist-section .assist {
+  background-image: url("https://res.cloudinary.com/droyfngct/image/upload/v1698767188/PPB/Backgrounds/Banner_-_Background_yfgn7e.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 83%;
+  height: 208px;
+  display: flex;
+  flex-direction: column;
+  flex-direction: column;
+}
+
+.assist-section .assist .info {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(2px);
+  height: 70%;
+  position: relative;
+}
+.assist-section .assist .info .title {
+  position: absolute;
+  top: 0;
+}
+
+.assist-section .assist .info .title h3 {
+  color: var(--base);
+  font-family: "Oswald", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.assist-section .content .info .title img {
+  max-width: 50px;
+  max-height: 50px;
+}
+
+.assist-section .content .info p {
+  color: var(--Dark, #010000);
+  font-family: "Open Sans";
+  font-size: 26px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: normal;
+  align-items: center;
+  margin: auto 1em;
+}
+
+.assist-section .content .assist button {
+  color: #fff;
+  font-family: "Open Sans";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 17px 114px;
+  gap: 10px;
+  background: var(--accent, #eb3e20);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  position: absolute;
+  bottom: -1em;
+  left: 40%;
+  border-radius: 10px;
+}
+
+.assist-section .content .assist svg {
+  position: absolute;
+  right: 2%;
+}
+
+@media only screen and (max-width: 768px) {
+  .assist-section .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .assist-section .assist {
+    width: 90%;
+    margin: 0;
+    height: 20%;
+  }
+
+  .assist-section .assist .info {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    width: 90%;
+    height: 70px;
+    max-height: 300px;
+    margin: 1em 1em;
+  }
+  .assist-section .assist .info .title {
+    position: absolute;
+    top: 0;
+  }
+
+  .assist-section .assist .info .title h3 {
+    color: var(--base);
+    font-family: "Oswald", sans-serif;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .assist-section .content .info .title img {
+    max-width: 20px;
+    max-height: 50px;
+  }
+
+  .assist-section .content .info p {
+    font-size: 10px;
+  }
+
+  .assist-section .content .assist button {
+    font-size: 10px;
+    padding: 10px 30px;
+    gap: 10px;
+    margin: -1em auto;
+    position: initial;
+    cursor: pointer;
+  }
+
+  .assist-section .content .assist svg {
+    max-height: 100px;
+    max-width: 100px;
+    position: absolute;
+    right: -7%;
+  }
+}

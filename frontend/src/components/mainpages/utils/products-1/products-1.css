@@ -1,0 +1,210 @@
+.products-1-section {
+  background: var(--light);
+}
+
+.products-1-section .content {
+  display: flex;
+  flex-direction: column;
+  margin: 5em var(--content-m);
+}
+
+.products-1-section .content > div {
+  margin: 2em 0;
+}
+
+.products-1-section .content .first-row,
+.products-1-section .content .second-row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.products-1-section .content .second-row {
+  flex-direction: row-reverse;
+}
+
+.products-1-section .content .first-row .category-presentation,
+.products-1-section .content .second-row .category-presentation {
+  background-image: url("https://res.cloudinary.com/droyfngct/image/upload/v1698680563/PPB/Backgrounds/Home_-_Category_presentation_amcd0d.jpg");
+  background-size: 100%;
+  max-height: 326px;
+  max-width: 476px;
+  height: 326px;
+  width: 476px;
+  background-repeat: no-repeat;
+}
+
+.products-1-section .content .first-row .products-presentation,
+.products-1-section .content .second-row .products-presentation {
+  display: flex;
+}
+
+/* First row  */
+
+.products-1-section .content .first-row .category-presentation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.products-1-section .content .first-row .category-presentation .title h3,
+.products-1-section .content .second-row .category-presentation .title h3 {
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: "Open Sans";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-left: 0.3em;
+}
+
+.products-1-section .content .first-row .category-presentation .title img,
+.products-1-section .content .second-row .category-presentation .title img {
+  max-width: 56px;
+  max-height: 56px;
+}
+
+/* Second row  */
+
+.products-1-section .content .second-row .category-presentation {
+  position: relative;
+}
+
+.products-1-section .content .second-row .category-presentation .category-img {
+  margin-right: auto;
+  align-items: flex-end;
+  position: absolute;
+  right: 0;
+}
+.products-1-section .content .second-row .category-presentation .title {
+  align-items: flex-start;
+  position: absolute;
+  left: 1em;
+  bottom: 3em;
+}
+
+.products-1-section .content .second-row .category-presentation button {
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  left: 30%;
+  bottom: 0.2em;
+}
+
+.products-1-section .content button {
+  color: #fff;
+  font-family: Open Sans;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: inline-flex;
+  padding: 0px 81px;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--accent, #eb3e20);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.products-presentation {
+  display: flex;
+  align-items: center;
+}
+
+.products-presentation .chevron-arrow {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: var(--white);
+}
+
+@media only screen and (max-width: 768px) {
+  .products-1-section .content {
+    margin: 0;
+  }
+
+  .products-1-section .content .first-row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products-1-section .content .first-row .category-presentation,
+  .products-1-section .content .second-row .category-presentation {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    border-radius: 22px;
+    align-items: center;
+    margin: auto;
+    box-shadow: var(--box-shadow);
+    background-size: 150%;
+  }
+
+  /* Second row  */
+
+  .products-1-section .content .second-row {
+    flex-direction: column;
+  }
+
+  .products-1-section .content .second-row .category-presentation {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products-1-section
+    .content
+    .second-row
+    .category-presentation
+    .category-img {
+    margin-right: auto;
+    align-items: center;
+    position: initial;
+    margin-top: -3em;
+  }
+
+  .products-1-section .content .second-row .category-presentation .title {
+    align-items: center;
+    position: initial;
+  }
+
+  .products-1-section .content .second-row .category-presentation button {
+    position: initial;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+  }
+
+  .products-1-section .content .first-row .category-presentation,
+  .products-1-section .content .second-row .category-presentation {
+    margin-bottom: 2em;
+  }
+
+  /* Products  */
+
+  .products-1-section .content .first-row .products-presentation,
+  .products-1-section .content .second-row .products-presentation {
+    position: relative;
+  }
+
+  .products-1-section
+    .content
+    .first-row
+    .products-presentation
+    .product-card-item {
+  }
+
+  .chevron-arrow {
+    position: absolute;
+    margin: 0 1em;
+    z-index: 10;
+    box-shadow: var(--text-shadow);
+  }
+
+  .chevron-arrow.post {
+    right: 0;
+  }
+}

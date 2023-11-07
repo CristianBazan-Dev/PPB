@@ -1,0 +1,12 @@
+.notfound-page{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    flex-direction: column;
+}
+
+.notfound-img{
+    display: flex;
+    margin: auto;
+}

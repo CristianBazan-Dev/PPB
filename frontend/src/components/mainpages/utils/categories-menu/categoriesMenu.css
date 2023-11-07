@@ -1,0 +1,167 @@
+/* Entire page  */
+.categories {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  z-index: 300;
+  background-color: var(--light);
+}
+
+/* First element: Selection of category  */
+
+.categories-selection {
+  display: flex;
+  z-index: 300;
+  position: relative;
+}
+
+.hamburger-categories {
+  display: inline-block;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  flex-direction: column;
+  position: relative;
+}
+
+.hamburger-categories h3 {
+  color: var(--base);
+  font-family: Open Sans;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.hamburger-categories img {
+  margin-right: 1em;
+  margin-bottom: 0.2em;
+  width: 20px;
+}
+
+.toggle-option {
+  display: flex;
+  align-items: center;
+}
+
+.categories-list {
+  display: inline-flex;
+  align-items: flex-start;
+  gap: 100px;
+}
+
+.categories-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories-titles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.categories-titles h3 {
+  font-weight: bold;
+  margin-left: 10em;
+}
+
+/* Menu deployed  */
+
+.categories-menu {
+  z-index: 2;
+}
+
+/* All categories menu  */
+.all-categories {
+  display: flex;
+  position: absolute;
+}
+
+.all-categories .categories-menu {
+  max-height: 300px;
+  box-shadow: var(--box-shadow-alt);
+}
+
+.all-categories .categories-menu h3 {
+  cursor: pointer;
+  padding: 10px 20px;
+
+}
+
+.all-categories .categories-menu h3:hover {
+  background: var(--base);
+  color: var(--white);
+}
+
+.all-categories .categories-menu,
+.all-categories .subcategories {
+  background: var(--white);
+}
+
+.all-categories .subcategories {
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 500px;
+  overflow-y: scroll;
+  position: relative;
+  box-shadow: var(--box-shadow);
+}
+
+.all-categories .subcategories .name-mainCategory{
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 2px;
+  text-shadow: var(--text-shadow);
+  position: absolute;
+  top: 0;
+  background-image: url("https://res.cloudinary.com/droyfngct/image/upload/v1698767188/PPB/Backgrounds/Banner_-_Background_yfgn7e.jpg");
+  width: 100%; 
+  color: var(--white);
+  padding: 10px 20px;
+}
+
+.all-categories .subcategories .subcategory {
+  margin-top: 2em;
+  padding: 20px;
+}
+
+.all-categories .subcategories .subcategory p {
+  font-size: 12px;
+}
+
+/* Categories background */
+
+@keyframes slidingMenu {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+
+@media (max-width: 1027px) {
+  .toggle-title {
+    display: none;
+  }
+
+  .subcategories-show.active {
+    right: -5em;
+  }
+
+  .subcategories-show h4 {
+  }
+
+  .categories-titles h3 {
+    margin-left: 2em;
+  }
+}
+
+@media (max-width: 768px) {
+  .categories {
+    display: none;
+  }
+}

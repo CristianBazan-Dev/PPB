@@ -1,0 +1,152 @@
+.users-page {
+  overflow-x: auto;
+  margin: 0 5em;
+  z-index: 5;
+}
+
+.users-page h2,
+h4 {
+  text-align: center;
+  margin: 20px;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  font-size: 3em;
+}
+
+.users-page table {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px;
+  text-transform: capitalize;
+}
+
+.users .user-email {
+  text-transform: lowercase;
+}
+
+.buttons-actions-admins {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5em;
+}
+
+.delete-admin,
+.delete-user {
+  background: rgba(248, 57, 57, 0.863);
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.delete-admin:hover {
+  background: rgba(247, 86, 86, 0.863);
+  transition: 1s;
+}
+
+.create-admin {
+  background: rgb(171, 233, 146);
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.cart-link{
+  color: var(--secondary);
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Cart modal */
+
+.cart-modal {
+  background: #25275ea1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  height: 200%;
+}
+
+.close-cart-modal{
+  z-index: 12; 
+  width: 20px;
+  position: absolute;
+  top: 0;
+  right: 1em;
+  fill: var(--secondary);
+}
+
+.cart-alert {
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  position: relative;
+  top: 10%;
+  width: 70%;
+ 
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-radius: 15px;
+}
+
+.cart-items{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 5em;
+}
+
+.cart-alert-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 5em;
+  background-color: var(--base);
+  border-radius: 15px 15px 0px 0px;
+}
+
+.cart-alert-header h1 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
+.cart-alert-persona{
+  display: flex;
+  flex-direction: column;
+}
+
+.cart-alert-personal h2{
+  font-family: 'Oswald', sans-serif;
+}
+
+.cart-alert-personal h2:nth-child(2){
+  font-size: 1.5em;
+  text-transform: none;
+  user-select: text;
+}
+
+/* Cart card */
+
+.cart-alert-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+}

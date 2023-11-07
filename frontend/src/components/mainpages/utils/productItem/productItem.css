@@ -1,0 +1,331 @@
+:root {
+  --product_cardWidth: 48%;
+  --product_cardHeight: 90%;
+
+  -product_card_tablewidth: 10%;
+  -product_card_tableheight: 20%;
+
+  --product_cardImgWidth: 100px;
+  --product_cardImgHeight: 100px;
+
+  --product_cardh2FontSize: 1.1em;
+
+  --buttonWidth: 80px;
+  --buttonHeight: 30px;
+}
+
+.product_card {
+  width: var(--product_cardWidth);
+  height: var(--product_cardHeight);
+  padding: 0 20px;
+  margin: 3em 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  animation: floatAnimation 3s alternate infinite ease-in-out;
+  z-index: 2;
+}
+
+.product_card:hover {
+  filter: brightness(1.2);
+  animation: shadowCard 500ms;
+}
+
+@keyframes shadowCard {
+  0% {
+    box-shadow: 0 0 15px #ddd;
+    filter: brightness(1);
+  }
+  100% {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+      rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+      rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    filter: brightness(1.2);
+  }
+}
+
+.product_card img {
+  width: var(--product_cardImgWidth);
+  height: var(--product_cardImgHeigth);
+  display: block;
+  object-fit: cover;
+  max-width: var(--product_cardImgWidth);
+  max-height: var(--product_cardImgHeigth);
+}
+
+.product_card img:hover {
+  transform: scale(1.2);
+  transition: transform 1s;
+}
+
+.product_box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.product_box h2 {
+  cursor: pointer;
+  text-transform: capitalize;
+  color: #323232;
+  font-size: var(--product_cardh2FontSize);
+  font-weight: bold;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+.product_box h3 {
+  color: var(--base);
+  font-style: bold;
+  font-weight: 600;
+  font-size: 1.7em;
+  letter-spacing: 1px;
+  padding-top: 0.8em;
+}
+
+.offer-prices {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.offer-prices span {
+  color: var(--secondary);
+  opacity: 0.5;
+  text-decoration: line-through;
+  margin-bottom: -2.3em;
+}
+
+.offer-prices h3 {
+  color: var(--base);
+  margin-top: 0.8em;
+}
+
+.offer-tag {
+  position: absolute;
+  top: 0;
+  background: var(--base);
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+  color: var(--secondary);
+  font-family: "Oswald", sans-serif;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.offer-tag:hover {
+  font-family: "Oswald", sans-serif;
+}
+
+.offer-tag img {
+  max-width: 25px;
+  max-height: 25px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.dues-style {
+  font-size: 0.5em;
+  margin: 0;
+  display: inline;
+}
+
+.dues-style h4 {
+  color: var(--base);
+}
+
+.dues-style .accent {
+  color: rgb(43, 224, 43);
+}
+
+.product_box p {
+  display: none;
+  margin: auto;
+  justify-content: center;
+  height: 50px;
+  overflow: hidden;
+  color: #323232;
+  font-size: 9px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.row_btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.row_btn a {
+  width: 50%;
+  text-align: center;
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 2px;
+  padding: 15px;
+}
+
+#btn_view,
+#btn_buy {
+  align-items: center;
+  background-color: #ffffff;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #16437e;
+  outline: 1px solid #16437e;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  width: var(--buttonWidth);
+  height: var(--buttonHeight);
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  margin: 5px;
+}
+
+#btn_view:hover,
+#btn_view:focus,
+#btn_buy:hover,
+#buy:focus {
+  background-color: #16437e;
+  color: #ffffff;
+  transition: background-color 500ms;
+}
+
+#btn_view:active {
+  background: #09223b;
+  color: rgb(255, 255, 255, 0.7);
+}
+
+#btn_view:disabled {
+  cursor: not-allowed;
+  background: rgba(0, 0, 0, 0.08);
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.product_card input {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+}
+
+.product_card input[type="checkbox"] {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+@media (max-width: 1027px) {
+  .product_card {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .product_card {
+    min-height: 200px;
+    width: 70%;
+    height: 200px;
+  }
+
+  .product_card img {
+    width: 50%;
+
+    display: block;
+    object-fit: cover;
+    margin-top: 2em;
+  }
+
+  .product_card img:hover {
+    transform: scale(1.2);
+    transition: transform 1s;
+  }
+
+  .product_box h2 {
+    font-size: 0.5em;
+  }
+
+  .product_box h3 {
+    font-size: 0.7em;
+    letter-spacing: 1px;
+    padding-top: 0.8em;
+  }
+
+  .dues-style h4 {
+    font-size: 0.5em;
+    color: var(--base);
+    margin-top: -1em;
+  }
+
+  .dues-style .accent {
+    color: rgb(43, 224, 43);
+  }
+
+  #btn_view,
+  #btn_buy {
+    max-width: 50px;
+    max-height: 20px;
+    font-size: 0.3em;
+  }
+
+  .offer-prices span {
+    color: var(--secondary);
+    opacity: 0.5;
+    text-decoration: line-through;
+    margin-bottom: -1em;
+    font-size: 0.5em;
+  }
+
+  .offer-tag:hover {
+    font-family: "Oswald", sans-serif;
+  }
+
+  .offer-tag img {
+    max-width: 25px;
+    max-height: 25px;
+    position: absolute;
+    top: -2em;
+    left: 0;
+    z-index: 0;
+  }
+}

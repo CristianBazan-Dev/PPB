@@ -1,0 +1,169 @@
+.credit-page {
+  background: var(--third);
+}
+
+.credit-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 10em;
+}
+
+.credit-text .credit-titles h1 {
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  font-size: 5em;
+}
+
+.credit-details {
+  margin: 5em;
+}
+
+.credit-details ul {
+  list-style: none; /* Remove default bullets */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.credit-details h3 {
+  font-size: 2em;
+  justify-content: center;
+  text-align: center;
+}
+
+.credit-details ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+
+.credit-details ul li {
+  font-size: 1.5em;
+}
+
+.credit-details h4 {
+  margin-top: 3em;
+}
+
+.credit-contact-icons {
+  display: flex;
+}
+.credit-contact-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.credit-contact-item a {
+  color: inherit;
+  text-align: center;
+}
+
+.credit-contact-icon {
+  fill: var(--base);
+  max-width: 100px;
+  margin: auto;
+}
+
+.credit-contact-icon.mail {
+  margin-top: 1em;
+}
+
+@media (max-width: 1386px) {
+}
+
+@media (max-width: 1218px) {
+  .credit-text .credit-titles h1 {
+    font-size: 4em;
+  }
+
+  .credit-details h3 {
+    font-size: 1.8em;
+  }
+  .credit-details ul li {
+    font-size: 1.3em;
+  }
+  
+  .credit-contact h2{
+    font-size: 1.7em;
+  }
+
+  .credit-contact-item h4{
+    font-size: 1em;
+  }
+
+}
+
+@media (max-width: 873px) {
+  .credit-text .credit-titles h1 {
+    font-size: 3em;
+  }
+
+  .credit-details h3 {
+    font-size: 1.5em;
+  }
+  .credit-details ul li {
+    font-size: 1em;
+  }
+  
+  .credit-contact h2{
+    font-size: 1.5em;
+  }
+
+  .credit-contact-item h4{
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .credit-page {
+    margin-top: 5em;
+    background: #fff;
+
+  }
+
+  .credit-text .credit-titles h1 {
+    margin: auto;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  .credit-details h3 {
+    font-size: 1.5em;
+    
+  }
+  .credit-details ul li {
+    text-align: center;
+
+    font-size: .8em;
+  }
+
+  .credit-details h4{
+    font-size: 1em;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .credit-contact h2{
+    font-size: 1em;
+  }
+
+  .credit-contact{
+    text-align: center;
+  }
+
+  .credit-contact-item h4{
+    font-size: 1em;
+    text-align: center;
+  }
+
+}
