@@ -6,6 +6,7 @@ function CategoriesSelection(props) {
     <div className="categories-selection-section">
       <div className="content">
         <div className="first-row">
+          
           <Link to="/category/652007931e845ea315b7363b">
             <div className="category-item">
               <div className="title">

@@ -1,0 +1,117 @@
+.cyber-monday-section {
+  background: #ff3e9f;
+}
+
+.cyber-monday-section .content {
+  width: 100%;
+  padding: 2em var(--content-m);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.cyber-monday-section .content .logo{
+  display: flex;
+  justify-content: center;
+}
+
+.cyber-monday-section .content .logo img {
+  max-width: 50%;
+  width: 100%;
+}
+
+
+.cyber-monday-section .content .products-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  place-items: center;
+  margin: 2em;
+}
+
+.cyber-monday-section .content .products-container h2{
+font-family: 'Oswald', sans-serif;
+text-align: left;
+font-size: 30px;
+color: #EFDA00;
+text-shadow: var(--text-shadow);
+}
+
+.cyber-monday-section button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #ff3e9f;
+  color:#EFDA00 ;
+  padding: 10px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing:  2px; 
+  text-shadow: 3px 3px 20px #000000,
+  -2px 1px 30px #000000;
+  animation: cyberMonday 2s ease-in-out infinite alternate;
+  border-radius: 15px;
+  border: 2px solid #83EEFF;
+  margin-bottom: 1em;
+}
+
+.cyber-monday-section button:hover{
+  background: #f346ed;
+  transition: .5s;
+}
+
+.cyber-monday-section .product-card-item{
+  border: 2px solid #83EEFF;
+  border-radius: 15px;
+
+}
+
+.cyber-monday-section .product-card-item .info .title{
+  color: #f346ed;
+  text-shadow: -2px 2px 0px #00e6e6;
+  margin-bottom: .3em;
+}
+
+.cyber-monday-section .product-card-item .info .full-price{
+  color: var(--base);
+  text-shadow: -2px 2px 0px #00e6e6;
+}
+
+
+
+.cyber-monday-section .product-card-item .product-card-button{
+  border: 2px solid #83EEFF;
+  border-radius: 0 0 15px 15px;
+  background: #f346ed;
+}
+
+.cyber-monday-section .product-card-item .product-card-button:hover{
+  background: #83EEFF;
+}
+
+.cyber-monday-section .product-card-item .product-card-button a {
+  color:#EFDA00 ;
+}
+
+.cyber-monday-section .product-card-item .product-card-button svg {
+  fill:#EFDA00 ;
+  stroke: #EFDA00;
+}
+
+
+@media (max-width: 768px) {
+  .cyber-monday-section .content {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cyber-monday-section .content .logo img {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+}

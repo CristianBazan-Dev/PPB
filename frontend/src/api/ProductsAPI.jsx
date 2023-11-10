@@ -8,6 +8,9 @@ function ProductsAPI(props) {
   const [offerProducts, setOfferProducts] = useState([]);
   const [phones, setPhones] = useState([]);
   const [tv, setTv] = useState([])
+  const [electrodomestics, setElectrodomestics] = useState([])
+
+
   const [seeOffers, setSeeOffers] = useState(true);
   const [callback, setCallback] = useState(false);
   const [category, setCategory] = useState("");
@@ -20,9 +23,13 @@ function ProductsAPI(props) {
   const [allProducts, setAllProducts] = useState([]);
   const [resultAll, setResultAll] = useState("");
 
+  const [cyberMonday, setCyberMonday] = useState([])
+
+
   const [detailProduct, setDetailProduct] = useState([]);
 
   const params = useParams();
+
 
   useEffect(() => {
     const getProducts = async () => {
@@ -41,9 +48,7 @@ function ProductsAPI(props) {
       setAllProducts(res.data.products);
     };
     getAllProducts();
-  }, [callback, category, subcategory, sort, search, page]);
 
-  useEffect(() => {
     const gettingOfferProducts = async () => {
       try {
         const res = await axios.get(`/api/products/offer?${category}&${sort}`);
@@ -53,9 +58,8 @@ function ProductsAPI(props) {
       }
     };
     gettingOfferProducts();
-  }, [callback, category, subcategory, sort]);
 
-  useEffect(() => {
+
     const getPhones = async () => {
       const res = await axios.get(
         `/api/products?limit=${
@@ -78,6 +82,30 @@ function ProductsAPI(props) {
       setResult(res.data.result);
     };
     getTV();
+
+    
+    const getElectrodomestics = async () => {
+      const res = await axios.get(
+        `/api/products?limit=${
+          page * 8
+        }&subcategory=6520072e1e845ea315b735ff&sort=-price`
+      );
+      setElectrodomestics(res.data.products);
+      setResult(res.data.result);
+    };
+    getElectrodomestics();
+
+    const getCyberMonday = async () => {
+      const res = await axios.get(
+        `/api/products?limit=${
+          page * 8
+        }&category=6547f8cd0b66b722b43e2de7&sort=-price`
+      );
+      setCyberMonday(res.data.products);
+      setResult(res.data.result);
+    };
+    getCyberMonday();
+
   }, [callback, category, subcategory, sort, search, page]);
 
 
@@ -89,6 +117,8 @@ function ProductsAPI(props) {
     offerProducts: [offerProducts, setOfferProducts],
     phones: [phones, setPhones],
     tv: [tv, setTv],
+    electrodomestics: [electrodomestics, setElectrodomestics],
+    cyberMonday: [cyberMonday, setCyberMonday], 
     seeOffers: [seeOffers, setSeeOffers],
     callback: [callback, setCallback],
     category: [category, setCategory],

@@ -27,6 +27,8 @@ function CategoriesAPI(props) {
   const [idSecSubcategory, setIdSecSubcategory] = useState(""); 
   const [nameSecSubcategory, setNameSecSubcategory] = useState(""); 
 
+  const [cyberMonday, setCyberMonday] = useState(false); 
+
   const [page, setPage] = useState(1);
   const [sort, setSort] = useState("");
 
@@ -73,6 +75,8 @@ function CategoriesAPI(props) {
     nameSecSubcategory: [nameSecSubcategory, setNameSecSubcategory], 
     page: [page, setPage],
     sort: [sort, setSort],
+
+    cyberMonday: [cyberMonday, setCyberMonday], 
   };
 }
 

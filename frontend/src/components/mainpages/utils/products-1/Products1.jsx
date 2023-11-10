@@ -34,6 +34,8 @@ function Products1(props) {
   const [showPrevTv, setShowPrevTv] = useState(true);
   const [showPosTv, setShowPosTv] = useState(true);
 
+
+
   const deleteProduct = async (id, public_id) => {
     try {
       setLoading(true);
@@ -186,6 +188,7 @@ function Products1(props) {
                       product={product}
                       delete
                       Product={deleteProduct}
+                      key={product._id}
                     />
                   );
                 }
@@ -239,7 +242,7 @@ function Products1(props) {
 
             {tv.map((product, index) => {
               if (index >= prevTv && index < posTv) {
-                return <ProductCard product={product} />;
+                return <ProductCard product={product}   key={product._id}/>;
               }
             })}
 

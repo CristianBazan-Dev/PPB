@@ -1,5 +1,16 @@
 .credit-page {
+ display: flex;
+  flex-direction: column;
   background: var(--third);
+}
+
+.credit-page .credit-elements img{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  max-width: 200px;
+
 }
 
 .credit-text {
@@ -45,6 +56,7 @@
 
 .credit-details ul li {
   font-size: 1.5em;
+  color: var(--base);
 }
 
 .credit-details h4 {

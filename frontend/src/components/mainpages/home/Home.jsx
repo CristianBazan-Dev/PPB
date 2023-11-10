@@ -7,8 +7,13 @@ import Loading from "../utils/loading/Loading";
 
 import "./home.css";
 
+
+
 import CategoriesMenu from "../utils/categories-menu/CategoriesMenu";
 import Banner from "../utils/banner/Banner";
+
+import CyberMonday from "../utils/events/CyberMonday/CyberMonday"
+
 import PopularCategories from "../utils/popularCategories/PopularCategories";
 import Products1 from "../utils/products-1/Products1";
 import Products2 from "../utils/products-2/Products2";
@@ -59,6 +64,15 @@ function Products(props) {
           <Banner />
         </Suspense>
       </section>
+
+      {/* Events section */}
+      <section className="reveal">
+        <Suspense fallback={<Loading />}>
+          <CyberMonday />
+        </Suspense>
+      </section>
+
+
 
       {/* Popular categoríes*/}
       <section className="reveal">

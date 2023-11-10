@@ -16,17 +16,11 @@ function CreditPage(props) {
   return (
     <div className="credit-page">
       <div className="credit-elements">
-        <img src={MainBackground} alt="" className="credit-background" />
-
         <img
           src="https://res.cloudinary.com/dkdncsbmz/image/upload/v1684835523/planeta-precios-bajos-e-commerce/Assets/Planeta_voxnx7.png"
           alt=""
-          className="logo-credit"
+       
         />
-
-        <Arrow className="credit-arrow" />
-
-        <Id className="credit-id" />
       </div>
 
       <div className="credit-text">

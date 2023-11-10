@@ -146,8 +146,8 @@
   }
 
   .assist-section .content .assist svg {
-    max-height: 100px;
-    max-width: 100px;
+    max-height: 100%;
+    max-width: 100%;
     position: absolute;
     right: -7%;
   }

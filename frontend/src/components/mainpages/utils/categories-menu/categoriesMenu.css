@@ -1,4 +1,4 @@
-/* Entire page  */
+  /* Entire page  */
 .categories {
   display: flex;
   flex-direction: column;
@@ -36,35 +36,76 @@
 .hamburger-categories img {
   margin-right: 1em;
   margin-bottom: 0.2em;
-  width: 20px;
 }
 
 .toggle-option {
   display: flex;
   align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.toggle-option h3{
+
+
 }
 
 .categories-list {
   display: inline-flex;
   align-items: flex-start;
-  gap: 100px;
+  position: relative;
 }
 
 .categories-list {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.categories-list .cyber-monday-title{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ff3e9f;
+  color:#EFDA00 ;
+  padding: 10% 70%;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: 'Oswald', sans-serif;
+  letter-spacing:  2px; 
+  text-shadow: 3px 3px 20px #000000,
+  -2px 1px 30px #000000;
+  animation: cyberMonday 3s ease-in-out infinite alternate;
+  border-radius: 15px;
+  border: 2px solid #83EEFF;
+}
+
+@keyframes cyberMonday{
+  0%{
+    filter: brightness(1);
+  }
+  100%{
+    filter: brightness(1.3);
+  }
 }
 
 .categories-titles {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 50%;
+  width: 100%;
+}
+
+.categories-titles a{
+  width: 100%;
+  margin: 0 10%;
+
 }
 
 .categories-titles h3 {
+  width: 100%; 
   font-weight: bold;
-  margin-left: 10em;
 }
 
 /* Menu deployed  */
@@ -77,10 +118,11 @@
 .all-categories {
   display: flex;
   position: absolute;
+  left: -25%;
 }
 
 .all-categories .categories-menu {
-  max-height: 300px;
+  max-height: 400px;
   box-shadow: var(--box-shadow-alt);
 }
 

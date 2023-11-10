@@ -50,6 +50,8 @@ function Header(props) {
 
   const [startSearch, setStartSearch] = useState(false);
 
+  const [userMenu, setUserMenu] = useState(false);
+
   const [menuDeploy, setMenuDeploy] = useState(false);
 
   const [navResp, setNavResp] = useState(false);
@@ -62,7 +64,9 @@ function Header(props) {
 
   useEffect(() => {
     const getProducts = async () => {
-      const res = await axios.get(`/api/products?title[regex]=${search}`);
+      const res = await axios.get(
+        `/api/products?title[regex]=${search}`
+      );
       setAllProducts(res.data.products);
       setResultAll(res.data.result);
     };
@@ -252,23 +256,17 @@ function Header(props) {
               ""
             ) : (
               <div>
-                <div className="user-icon">
-                  <img
-                    src={User}
-                    alt=""
-                    onMouseOver={() => {
-                      const menuDeploy = document.querySelector(".user-menu");
-                      menuDeploy.classList.add("active");
-                    }}
-                    onClick={() => {
-                      const menuDeploy = document.querySelector(".user-menu");
-                      menuDeploy.classList.add("active");
-                    }}
-                  />
+                <div
+                  className="user-icon"
+                  onClick={() => {
+                    setUserMenu(!userMenu);
+                  }}
+                >
+                  <img src={User} alt="" />
                 </div>
 
                 <div
-                  className="user-menu"
+                  className={userMenu ? "user-menu active" : "user-menu"}
                   onMouseOver={() => {
                     const menuDeploy = document.querySelector(".user-menu");
                     menuDeploy.classList.add("active");
@@ -351,6 +349,7 @@ function Header(props) {
                         onClick={() => {
                           redirectingProduct(item._id);
                         }}
+                        key={item._id}
                       >
                         <img src={item.images.url} alt="" />
                         <h4>{item.title}</h4>
@@ -399,18 +398,16 @@ function Header(props) {
                     src={User}
                     alt=""
                     onMouseOver={() => {
-                      const menuDeploy = document.querySelector(".user-menu");
-                      menuDeploy.classList.add("active");
+                      setUserMenu(!userMenu);
                     }}
                     onClick={() => {
-                      const menuDeploy = document.querySelector(".user-menu");
-                      menuDeploy.classList.add("active");
+                      setUserMenu(!userMenu);
                     }}
                   />
                 </div>
 
                 <div
-                  className="user-menu"
+                  className={userMenu ? "user-menu active" : "user-menu"}
                   onMouseOver={() => {
                     const menuDeploy = document.querySelector(".user-menu");
                     menuDeploy.classList.add("active");
@@ -736,7 +733,7 @@ function Header(props) {
               >
                 Contacto
               </Link>{" "}
-              <div className="whatsapp-logo" onMouse>
+              <div className="whatsapp-logo">
                 <a href="https://wa.link/uxd2d6">
                   <Whatsapp className="whatsapp-icon" width="15px" />
                 </a>
@@ -839,6 +836,7 @@ function Header(props) {
                           onClick={() => {
                             redirectingProduct(item._id);
                           }}
+                          key={item._id}
                         >
                           <img src={item.images.url} alt="" />
                           <h4>{item.title}</h4>
@@ -863,12 +861,13 @@ function Header(props) {
                     setCatNavResp(false);
                   }}
                   className="category"
+                  key={cat._id}
                 >
                   <li>{cat.name}</li>
                   {subcategories.map((subcat) => {
                     if (subcat.category == cat._id) {
                       return (
-                        <>
+                        <div key={subcat._id}>
                           <div className="subcategory">
                             <Link
                               to={`/subcategory/${subcat._id}`}
@@ -881,13 +880,16 @@ function Header(props) {
                           {secSubcategories.map((secSubcat) => {
                             if (secSubcat.subcategoryId == subcat._id) {
                               return (
-                                <Link to={`/secSubcategory/${secSubcat._id}`}>
+                                <Link
+                                  to={`/secSubcategory/${secSubcat._id}`}
+                                  key={secSubcat._id}
+                                >
                                   <p>{secSubcat.name}</p>
                                 </Link>
                               );
                             }
                           })}
-                        </>
+                        </div>
                       );
                     }
                   })}
