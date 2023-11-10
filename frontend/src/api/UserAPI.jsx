@@ -14,40 +14,38 @@ function UserAPI(token) {
   const [email, setEmail] = useState("");
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    // if (token) {
-    //   const getUser = async () => {
-    //     try {
-    //       const res = await axios.get("/users/infor", {
-    //         headers: { Authorization: token },
-    //       });
-    //       setIsLogged(true);
-    //       res.data.role === 2 ? setIsSuperAdmin(true) : setIsSuperAdmin(false); 
-    //       res.data.role === 1 ? setIsAdmin(true) : setIsAdmin(false);
-    //       setName(res.data.name);
-    //       setEmail(res.data.email);
-    //       setCart(res.data.cart);
-    //     } catch (err) {
-    //       alert(err.response.data.msg);
-    //     }
-    //   };
-    //   getUser();
-    // }
-  }, [token]);
+  // useEffect(() => {
+  //   if (token) {
+  //     const getUser = async () => {
+  //       try {
+  //         const res = await axios.get("/users/infor", {
+  //           headers: { Authorization: token },
+  //         });
+  //         setIsLogged(true);
+  //         res.data.role === 2 ? setIsSuperAdmin(true) : setIsSuperAdmin(false); 
+  //         res.data.role === 1 ? setIsAdmin(true) : setIsAdmin(false);
+  //         setName(res.data.name);
+  //         setEmail(res.data.email);
+  //         setCart(res.data.cart);
+  //       } catch (err) {
+  //         alert(err.response.data.msg);
+  //       }
+  //     };
+  //     getUser();
+  //   }
+  //   const getNotifications = async () => {
+  //     try {
+  //       const res = await axios.get("/users/notification", {
+  //         headers: { Authorization: token },
+  //       });
+  //       setNotification(res.data);
+  //     } catch (err) {
+  //       alert(err.response.data.msg);
+  //     }
+  //   };
+  //   getNotifications();
+  // }, [token]);
 
-  useEffect(() => {
-    const getNotifications = async () => {
-      try {
-        const res = await axios.get("/users/notification", {
-          headers: { Authorization: token },
-        });
-        setNotification(res.data);
-      } catch (err) {
-        alert(err.response.data.msg);
-      }
-    };
-    getNotifications();
-  });
 
   const addCart = async (product) => {
     if (!isLogged)
