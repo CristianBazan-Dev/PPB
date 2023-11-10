@@ -1,6 +1,7 @@
 .popular-categories-section {
   width: 100%;
   background-color: var(--light);
+  overflow-x: hidden;
 }
 
 .popular-categories-section .content {
@@ -25,64 +26,19 @@
 
 .popular-categories-section .content .categories-circles .category-item {
   display: flex;
-  margin: 2em 4em;
+  margin: 2em 2em;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.popular-categories-section
-  .content
-  .categories-circles
-  .category-item
-  .presentation {
-  background: var(--base);
-  border-radius: 50%;
-  width: 123px;
-  height: 122px;
-  position: relative;
-  cursor: pointer;
-}
+
 
 .popular-categories-section .content .categories-circles .category-item img {
-  position: absolute;
+  width: 100%;
+  margin: 1em;
 }
 
-.popular-categories-section
-  .content
-  .categories-circles
-  .category-item:nth-child(1)
-  img {
-  top: 35%;
-}
-.popular-categories-section
-  .content
-  .categories-circles
-  .category-item:nth-child(2)
-  img {
-  top: 30%;
-}
-.popular-categories-section
-  .content
-  .categories-circles
-  .category-item:nth-child(3)
-  img {
-  top: 32%;
-}
-.popular-categories-section
-  .content
-  .categories-circles
-  .category-item:nth-child(4)
-  img {
-  top: 35%;
-}
-.popular-categories-section
-  .content
-  .categories-circles
-  .category-item:nth-child(5)
-  img {
-  top: 35%;
-}
 
 .popular-categories-section .content .categories-circles .category-item h3 {
   margin-top: 1em;
@@ -114,7 +70,10 @@
   }
 
   .popular-categories-section .content .categories-circles {
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
   }
+  
   .popular-categories-section .content .categories-circles a .category-item {
     margin: 1em 1em;
   }

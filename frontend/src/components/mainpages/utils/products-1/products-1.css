@@ -1,5 +1,6 @@
 .products-1-section {
   background: var(--light);
+  overflow: hidden;
 }
 
 .products-1-section .content {
@@ -188,6 +189,9 @@
   .products-1-section .content .first-row .products-presentation,
   .products-1-section .content .second-row .products-presentation {
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-items: center;
   }
 
   .products-1-section
@@ -199,12 +203,17 @@
 
   .chevron-arrow {
     position: absolute;
-    margin: 0 1em;
+    margin: 0 0;
     z-index: 10;
     box-shadow: var(--text-shadow);
+ 
+  }
+
+  .chevron-arrow.prev {
+    left: 1em;
   }
 
   .chevron-arrow.post {
-    right: 0;
+    right: 1em;
   }
 }

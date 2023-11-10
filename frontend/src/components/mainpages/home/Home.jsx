@@ -17,6 +17,7 @@ import CategoriesSelection from "../utils/categories-selection/CategoriesSelecti
 import Credit from "../utils/credit/Credit";
 
 import { ReactComponent as Whatsapp } from "../../headers/icon/whatsapp.svg";
+import CyberMonday from "../utils/events/CyberMonday/CyberMonday";
 
 const NewProducts = lazy(() => import("../utils/newProducts/NewProducts"));
 
@@ -57,6 +58,13 @@ function Products(props) {
 
         <Suspense fallback={<Loading />}>
           <Banner />
+        </Suspense>
+      </section>
+
+      {/* Events section */}
+      <section className="reveal">
+        <Suspense fallback={<Loading />}>
+          <CyberMonday />
         </Suspense>
       </section>
 

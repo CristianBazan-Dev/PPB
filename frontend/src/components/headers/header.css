@@ -39,6 +39,7 @@ header nav {
   right: 0;
   background: var(--base);
   width: 100%;
+  z-index: 1000;
 }
 
 nav ul {
@@ -366,11 +367,11 @@ nav ul:nth-child(1) li:hover {
   animation: appear 500ms alternate;
   position: absolute;
   right: 0;
-  background: var(--white);
+  background-image: url("https://res.cloudinary.com/droyfngct/image/upload/v1698680563/PPB/Backgrounds/Home_-_Category_presentation_amcd0d.jpg");
   font-size: 0.9em;
   position: absolute;
   top: 10%;
-  right: 10%;
+  right: 7%;
   z-index: 500;
 }
 
@@ -407,6 +408,10 @@ nav ul:nth-child(1) li:hover {
 
 .login-menu {
   margin-top: 0em;
+}
+
+.login-menu h3 {
+  color: var(--white);
 }
 
 .user-icon {
@@ -563,6 +568,10 @@ li {
   header .header-content > div {
     margin: 0;
   }
+
+  header .header-content{
+    margin: 0;
+  }
   header .header-content .logo,
   header .header-content .actions {
     display: none;
@@ -602,11 +611,10 @@ li {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    margin: 2em 0;
   }
 
-  header .menu {
-  }
-
+ 
   header .menu svg {
     width: 24px;
     height: 24px;
@@ -643,7 +651,7 @@ li {
 
   header .menu .actions .cart-icon span {
     font-size: 5px;
-    top: -15s%;
+    top: -15%;
     right: -10%;
   }
 
@@ -713,13 +721,16 @@ li {
     position: fixed;
     justify-content: space-around;
     bottom: 0;
+
     filter: brightness(1.1);
     z-index: 6;
+    overflow: hidden;
   }
 
   .header-responsive svg {
     width: 40px;
     height: 40px;
+
     opacity: 0.5;
   }
 

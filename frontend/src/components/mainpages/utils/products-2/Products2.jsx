@@ -9,7 +9,7 @@ import ProductCard from "../productCard/productCard";
 
 function Products2(props) {
   const state = useContext(GlobalState);
-  const [products, setProducts] = state.productsAPI.products;
+  const [electrodomestics, setElectrodomestics] = state.productsAPI.electrodomestics;
 
   return (
     <div className="products-2-section">
@@ -27,7 +27,7 @@ function Products2(props) {
           </div>
 
           <div className="products-presentation">
-            {products.map((product, index) => {
+            {electrodomestics.map((product, index) => {
               if (index < 3) {
                 return <ProductCard product={product} />;
               }
@@ -37,7 +37,7 @@ function Products2(props) {
 
         <div className="second-row">
           <div className="products-presentation">
-            {products.map((product, index) => {
+            {electrodomestics.map((product, index) => {
               if (index >= 3) {
                 return <ProductCard product={product} />;
               }
@@ -50,3 +50,4 @@ function Products2(props) {
 }
 
 export default Products2;
+  

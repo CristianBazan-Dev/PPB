@@ -28,7 +28,7 @@ function Register(props) {
     e.preventDefault();
 
     try {
-      await axios.post("/users/register", { ...user });
+      await axios.post("/api/users/register", { ...user });
 
       localStorage.setItem("firstlogin", true);
 

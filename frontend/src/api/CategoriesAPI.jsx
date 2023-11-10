@@ -32,6 +32,8 @@ function CategoriesAPI(props) {
 
 
 
+
+
   useEffect(() => {
     const getSubcategories = async () => {
       const res = await axios.get("/api/subcategory");
@@ -72,7 +74,7 @@ function CategoriesAPI(props) {
     idSecSubcategory: [idSecSubcategory, setIdSecSubcategory], 
     nameSecSubcategory: [nameSecSubcategory, setNameSecSubcategory], 
     page: [page, setPage],
-    sort: [sort, setSort],
+    sort: [sort, setSort]
   };
 }
 

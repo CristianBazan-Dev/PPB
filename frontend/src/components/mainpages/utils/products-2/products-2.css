@@ -1,4 +1,5 @@
 .products-2-section {
+  overflow-x: hidden;
 }
 
 .products-2-section .content {
@@ -131,6 +132,15 @@
   /* Second row */
   .products-2-section .content .second-row {
     margin: 1em 0;
+  }
+
+  .products-2-section .content .first-row .products-presentation,
+  .products-2-section .content .second-row .products-presentation 
+  {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    place-items: center;
+ 
   }
 
   .products-2-section .content .second-row .products-presentation {
