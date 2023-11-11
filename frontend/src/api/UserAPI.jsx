@@ -18,7 +18,7 @@ function UserAPI(token) {
     if (token) {
       const getUser = async () => {
         try {
-          const res = await axios.get("/api/users/infor", {
+          const res = await axios.get("/users/infor", {
             headers: { Authorization: token },
           });
           setIsLogged(true);
@@ -35,19 +35,19 @@ function UserAPI(token) {
     }
   }, [token]);
 
-  useEffect(() => {
-    const getNotifications = async () => {
-      try {
-        const res = await axios.get("/api/users/notification", {
-          headers: { Authorization: token },
-        });
-        setNotification(res.data);
-      } catch (err) {
-        alert(err.response.data.msg);
-      }
-    };
-    getNotifications();
-  });
+  // useEffect(() => {
+  //   const getNotifications = async () => {
+  //     try {
+  //       const res = await axios.get("/api/users/notification", {
+  //         headers: { Authorization: token },
+  //       });
+  //       setNotification(res.data);
+  //     } catch (err) {
+  //       alert(err.response.data.msg);
+  //     }
+  //   };
+  //   getNotifications();
+  // });
 
   const addCart = async (product) => {
     if (!isLogged)
@@ -61,7 +61,7 @@ function UserAPI(token) {
       setCart([...cart, { ...product, quantity: 1 }]);
 
       await axios.patch(
-        "/api/users/addcart",
+        "/users/addcart",
         { cart: [...cart, { ...product, quantity: 1 }] },
         {
           headers: { Authorization: token },

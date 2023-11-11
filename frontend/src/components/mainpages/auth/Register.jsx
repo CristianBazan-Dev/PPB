@@ -28,7 +28,7 @@ function Register(props) {
     e.preventDefault();
 
     try {
-      await axios.post("/api/users/register", { ...user });
+      await axios.post("/users/register", { ...user });
 
       localStorage.setItem("firstlogin", true);
 
@@ -39,7 +39,7 @@ function Register(props) {
   };
 
   return (
-    <div>
+    <div className="login-page">
       <div className="login-card">
         <div className="login-card-logo">
           <img

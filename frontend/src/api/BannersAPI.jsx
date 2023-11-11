@@ -9,7 +9,7 @@ function BannersAPI(props) {
 
   useEffect(() => {
     const getBanners = async () => {
-      const res = await axios.get("api/banners");
+      const res = await axios.get("/api/banners");
       setBanners(res.data);
     };
     getBanners();

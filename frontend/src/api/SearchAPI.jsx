@@ -9,6 +9,7 @@ function SearchAPI(props) {
   const [search, setSearch] = useState("");
   const [page, setPage] = useState(1);
   const [result, setResult] = useState(0);
+  const [category, setCategory] = useState([])
 
   useEffect(() => {
     const getProducts = async () => {
