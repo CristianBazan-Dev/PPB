@@ -64,9 +64,7 @@ function Header(props) {
 
   useEffect(() => {
     const getProducts = async () => {
-      const res = await axios.get(
-        `/api/products?title[regex]=${search}`
-      );
+      const res = await axios.get(`/api/products?title[regex]=${search}`);
       setAllProducts(res.data.products);
       setResultAll(res.data.result);
     };
@@ -82,7 +80,7 @@ function Header(props) {
           });
           setHistory(res.data);
         } else {
-          const res = await axios.get("/users/history", {
+          const res = await axios.get("/api/users/history", {
             headers: { Authorization: token },
           });
           setHistory(res.data);
@@ -93,7 +91,7 @@ function Header(props) {
   }, [token, isAdmin, isSuperAdmin, setHistory]);
 
   const logoutUser = async () => {
-    await axios.get("/users/logout");
+    await axios.get("/api/users/logout");
 
     localStorage.removeItem("firstLogin");
 

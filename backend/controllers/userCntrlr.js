@@ -35,7 +35,7 @@ const userCntrlr = {
 
       res.cookie("refreshtoken", refreshToken, {
         httpOnly: true,
-        path: "/users/refresh_token",
+        path: "/api/users/refresh_token",
         maxAge: 7 * 24 * 60 * 60 * 1000, //7d
       });
 
@@ -63,7 +63,7 @@ const userCntrlr = {
 
       res.cookie("refreshToken", refreshToken, {
         httpOnly: true,
-        path: "/users/refresh_token",
+        path: "/api/users/refresh_token",
         maxAge: 7 * 24 * 60 * 60 * 1000, // 7d
       });
 
@@ -75,7 +75,7 @@ const userCntrlr = {
   logout: async (req, res) => {
     try {
       res.clearCookie("refreshToken", {
-        path: "/users/refresh_token",
+        path: "/api/users/refresh_token",
       });
       return res.json({ msg: "Cerraste sesión." });
     } catch (err) {

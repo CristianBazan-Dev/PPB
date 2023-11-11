@@ -18,7 +18,7 @@ function UserAPI(token) {
     if (token) {
       const getUser = async () => {
         try {
-          const res = await axios.get("/users/infor", {
+          const res = await axios.get("/api/users/infor", {
             headers: { Authorization: token },
           });
           setIsLogged(true);
@@ -61,7 +61,7 @@ function UserAPI(token) {
       setCart([...cart, { ...product, quantity: 1 }]);
 
       await axios.patch(
-        "/users/addcart",
+        "/api/users/addcart",
         { cart: [...cart, { ...product, quantity: 1 }] },
         {
           headers: { Authorization: token },
