@@ -21,7 +21,7 @@ function OrderHistory(props) {
           });
           setHistory(res.data);
         } else {
-          const res = await axios.get("/users/history", {
+          const res = await axios.get("/api/users/history", {
             headers: { Authorization: token },
           });
           setHistory(res.data);
