@@ -380,6 +380,17 @@ function CreateProduct(props) {
           <div className="row">
             <label htmlFor="dues">Cuotas</label>
             <div className="dues-rows">
+            <div className="due-option">
+                <label htmlFor="">1</label>
+                <input
+                  type="radio"
+                  name="dues"
+                  value={1}
+                  onChange={handleDues}
+                />
+              </div>
+
+
               <div className="due-option">
                 <label htmlFor="">3</label>
                 <input

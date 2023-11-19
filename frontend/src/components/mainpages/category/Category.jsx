@@ -78,6 +78,31 @@ function Category(props) {
     }
   }, [params]);
 
+  const deleteProduct = async (id, public_id) => {
+    try {
+      setLoading(true);
+
+      const destroyImg = axios.post(
+        "/api/destroy",
+        { public_id },
+        {
+          headers: { Authorization: token },
+        }
+      );
+
+      const deleteProduct = axios.delete(`/api/products/${id}`, {
+        headers: { Authorization: token },
+      });
+
+      await destroyImg;
+      await deleteProduct;
+      setCallback(!callback);
+      setLoading(false);
+    } catch (err) {
+      alert(err.response.data.msg);
+    }
+  };
+
   useEffect(() => {
     const getCategoryProducts = async () => {
       const res = await axios.get(
@@ -297,6 +322,7 @@ function Category(props) {
                       key={product._id}
                       product={product}
                       isAdmin={isAdmin}
+                      deleteProduct={deleteProduct}
                     />
                   </Link>
                 );

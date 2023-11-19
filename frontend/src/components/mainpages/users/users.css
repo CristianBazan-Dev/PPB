@@ -1,6 +1,5 @@
 .users-page {
-  overflow-x: auto;
-  margin: 0 5em;
+  margin: 5em;
   z-index: 5;
 }
 
@@ -82,7 +81,7 @@ td {
   z-index: 12; 
   width: 20px;
   position: absolute;
-  top: 0;
+  top: 2em;
   right: 1em;
   fill: var(--secondary);
 }

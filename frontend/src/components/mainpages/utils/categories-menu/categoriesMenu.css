@@ -11,6 +11,9 @@
 
 .categories-selection {
   display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-left: -8%;
   z-index: 300;
   position: relative;
 }
@@ -52,6 +55,7 @@
 
 .categories-list {
   display: inline-flex;
+  
   align-items: flex-start;
   position: relative;
 }
@@ -119,6 +123,7 @@
   display: flex;
   position: absolute;
   left: -25%;
+  width: 200%;
 }
 
 .all-categories .categories-menu {
@@ -147,6 +152,7 @@
   flex-wrap: wrap;
   max-height: 500px;
   overflow-y: scroll;
+  width: 100%;
   position: relative;
   box-shadow: var(--box-shadow);
 }

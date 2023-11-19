@@ -66,11 +66,11 @@ function Products(props) {
       </section>
 
       {/* Events section */}
-      <section className="reveal">
+      {/* <section className="reveal">
         <Suspense fallback={<Loading />}>
-          <CyberMonday />
+        
         </Suspense>
-      </section>
+      </section> */}
 
 
 

@@ -16,13 +16,13 @@ function SearchAPI(props) {
       const res = await axios.get(
         `/api/products?limit=${
           page * 6
-        }&${category}&${sort}&title[regex]=${search}`
+        }&title[regex]=${search}`
       );
       setProducts(res.data.products);
       setResult(res.data.result);
     };
     getProducts();
-  }, [callback, category, subcategory, sort, search, page]);
+  }, [callback, sort, search, page]);
 
   return {
     products: [products, setProducts],

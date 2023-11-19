@@ -51,8 +51,11 @@ function Header(props) {
   const [startSearch, setStartSearch] = useState(false);
 
   const [userMenu, setUserMenu] = useState(false);
+  const [adminMenu, setAdminMenu] = useState(false);
 
   const [menuDeploy, setMenuDeploy] = useState(false);
+
+
 
   const [navResp, setNavResp] = useState(false);
   const [homeResp, setHomeResp] = useState(false);
@@ -62,6 +65,11 @@ function Header(props) {
 
   const params = useParams();
 
+  console.log(allProducts)
+  useEffect(() => {
+
+  }, [callback, search, page]);
+
   useEffect(() => {
     const getProducts = async () => {
       const res = await axios.get(`/api/products?title[regex]=${search}`);
@@ -69,9 +77,7 @@ function Header(props) {
       setResultAll(res.data.result);
     };
     getProducts();
-  }, [callback, search, page]);
 
-  useEffect(() => {
     if (token) {
       const getHistory = async () => {
         if (isAdmin || isSuperAdmin) {
@@ -105,7 +111,7 @@ function Header(props) {
   const adminRouter = () => {
     return (
       <>
-        <div className="admin-ul">
+        <div className={adminMenu ? "admin-ul active" : "admin-ul"}>
           <li>
             <Link to="/create_product">Crear producto</Link>
           </li>
@@ -363,7 +369,12 @@ function Header(props) {
         </div>
 
         <div className="actions">
-          <div className="admin-title" onClick={deployAdminMenu}>
+          <div
+            className="admin-title"
+            onClick={() => {
+              setAdminMenu(!adminMenu);
+            }}
+          >
             <Link to="/">
               <h1>
                 {isSuperAdmin

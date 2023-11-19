@@ -24,7 +24,7 @@ function Users(props) {
     if (isAdmin || isSuperAdmin) {
       const getUsers = async () => {
         try {
-          const res = await axios.get("/users/all-users", {
+          const res = await axios.get("/api/users/all-users", {
             headers: { Authorization: token },
           });
           setUsers(res.data);
@@ -39,7 +39,7 @@ function Users(props) {
   useEffect(() => {
     const getAdmins = async () => {
       try {
-        const res = await axios.get("/users/admins", {
+        const res = await axios.get("/api/users/admins", {
           headers: { Authorization: token },
         });
         setAdmins(res.data);
@@ -52,7 +52,7 @@ function Users(props) {
 
   const createAdmin = async (id) => {
     try {
-      const res = await axios.put(`/users/superadmin/${id}`, {
+      const res = await axios.put(`/api/users/superadmin/${id}`, {
         headers: { Authorization: token },
       });
       alert(res.data.msg);
@@ -64,7 +64,7 @@ function Users(props) {
 
   const deleteAdmin = async (id) => {
     try {
-      const res = await axios.put(`/users/admindelete/${id}`, {
+      const res = await axios.put(`/api/users/admindelete/${id}`, {
         headers: { Authorization: token },
       });
       alert(res.data.msg);
@@ -76,7 +76,7 @@ function Users(props) {
 
   const deleteUser = async (id) => {
     try {
-      const res = await axios.delete(`/users/userdelete/${id}`, {
+      const res = await axios.delete(`/api/users/userdelete/${id}`, {
         headers: { Authorization: token },
       });
       alert(res.data.msg);

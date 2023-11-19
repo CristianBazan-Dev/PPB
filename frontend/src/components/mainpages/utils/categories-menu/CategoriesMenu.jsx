@@ -34,7 +34,7 @@ function CategoriesMenu(props) {
 
   const [categoryMenu, setCategoryMenu] = useState("");
 
-  const [cyberMonday, setCyberMonday] = state.categoriesAPI.cyberMonday; 
+  const [cyberMonday, setCyberMonday] = state.categoriesAPI.cyberMonday;
 
   const handleCategory = (e) => {
     setCategory(`category=${e.target.id}`);
@@ -66,46 +66,30 @@ function CategoriesMenu(props) {
             </div>
 
             <div className="categories-titles">
-            <Link
+              {/* <Link
                 to="/category/6547f8cd0b66b722b43e2de7"
 
               >
                 <h3 className="cyber-monday-title">Cyber Monday</h3>
-              </Link>
+              </Link> */}
 
-
-              <Link
-                to="/category/6520071d1e845ea315b735f5"
-
-              >
+              <Link to="/category/6520071d1e845ea315b735f5">
                 <h3>Electrodomésticos</h3>
               </Link>
 
-              <Link
-                to="/subcategory/6520068e1e845ea315b735ca"
-
-              >
+              <Link to="/subcategory/6520068e1e845ea315b735ca">
                 <h3>Televisión</h3>
               </Link>
 
-              <Link
-                to="/category/652006821e845ea315b735c0"
-    
-              >
+              <Link to="/category/652006821e845ea315b735c0">
                 <h3>Tecnología</h3>
               </Link>
 
-              <Link
-                to="/subcategory/652007b61e845ea315b73657"
-       
-              >
+              <Link to="/subcategory/652007b61e845ea315b73657">
                 <h3>Calefacción</h3>
               </Link>
 
-              <Link
-                to="/subcategory/652006b71e845ea315b735db"
-     
-              >
+              <Link to="/subcategory/652006b71e845ea315b735db">
                 <h3>Celulares</h3>
               </Link>
             </div>

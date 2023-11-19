@@ -21,7 +21,7 @@ function OrderHistory(props) {
           });
           setHistory(res.data);
         } else {
-          const res = await axios.get("/api/users/history", {
+          const res = await axios.get("/users/history", {
             headers: { Authorization: token },
           });
           setHistory(res.data);
@@ -35,7 +35,7 @@ function OrderHistory(props) {
     try {
       const { name, value } = e.target;
       const res = await axios.post(
-        `api/checkout/${e.target.id}`,
+        `/api/checkout/${e.target.id}`,
         {
           [name]: value,
         },
