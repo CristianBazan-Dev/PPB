@@ -52,18 +52,10 @@ function Subcategory(props) {
   const [page, setPage] = useState(1);
   const [result, setResult] = useState(0);
 
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   useEffect(() => {
-    if (window.location.pathname == `/subcategory/${params.id}`) {
-      setSubcategory(`subcategory=${params.id}`);
-      setIdSubcategory(params.id);
-    }
-  });
+    setSubcategory(`subcategory=${params.id}`);
+    setIdSubcategory(params.id);
 
-  useEffect(() => {
     const getCategoryProducts = async () => {
       const res = await axios.get(
         `/api/products?limit=${page * 12}&${subcategory}&${sort}`
@@ -74,7 +66,7 @@ function Subcategory(props) {
       setResult(res.data.result);
     };
     getCategoryProducts();
-  }, [callback, category, subcategory, secSubcategory, page, sort]);
+  }, [params.id, callback, category, subcategory, secSubcategory, page, sort]);
 
   useEffect(() => {
     const filtringCat = categories.filter((cat) => {

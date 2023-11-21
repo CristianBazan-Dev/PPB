@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "an e-commerce for a technology store",
   "main": "server.js",
+  "homepage": "https://www.planetapreciosbajos.com/", 
   "scripts": {
     "start": "nodemon server.js",
     "server": "nodemon server.js",

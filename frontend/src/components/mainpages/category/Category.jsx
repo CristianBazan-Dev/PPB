@@ -1,4 +1,4 @@
-import  { useState, useEffect, useContext, useLayoutEffect } from "react";
+import { useState, useEffect, useContext, useLayoutEffect } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./category.css";
 
@@ -12,12 +12,10 @@ import LoadMore from "../home/LoadMore";
 
 import { ReactComponent as FiltersIcon } from "../../headers/icon/filters-2.svg";
 
-
 import Iso from "../../../assets/img/iso.png";
 
-
-// Events Img 
-import CyberMondayLogo from "../utils/events/CyberMonday/graphs/logo.png"
+// Events Img
+import CyberMondayLogo from "../utils/events/CyberMonday/graphs/logo.png";
 
 function Category(props) {
   const state = useContext(GlobalState);
@@ -56,22 +54,19 @@ function Category(props) {
   const [page, setPage] = useState(1);
   const [result, setResult] = useState(0);
 
+  // Events
 
-  // Events 
-
-  const [cyberMonday, setCyberMonday] = state.categoriesAPI.cyberMonday; 
+  const [cyberMonday, setCyberMonday] = state.categoriesAPI.cyberMonday;
   useEffect(() => {
-    if (window.location.pathname == `/category/${params.id}`) {
-      setCategory(`category=${params.id}`);
-      setIdMainCategory(params.id);
-      setIdCategory(params.id);
-      setSubcategory("");
-    }
+    setCategory(`category=${params.id}`);
+    setIdMainCategory(params.id);
+    setIdCategory(params.id);
+    setSubcategory("");
 
-    if(params.id == "6547f8cd0b66b722b43e2de7"){
-      setCyberMonday(true)
-    }
-  }, [params]);
+    // if(params.id == "6547f8cd0b66b722b43e2de7"){
+    //   setCyberMonday(true)
+    // }
+  }, [params.id]);
 
   const deleteProduct = async (id, public_id) => {
     try {
@@ -104,7 +99,6 @@ function Category(props) {
         `/api/products?limit=${page * 12}&${category}&${sort}`
       );
 
-      
       setCategoryProducts(res.data.products);
       setResult(res.data.result);
     };
@@ -155,21 +149,33 @@ function Category(props) {
         }
       })}
 
-
-      
-      <div className={cyberMonday ? "categories-links cyber-monday" : "categories-links"}>
+      <div
+        className={
+          cyberMonday ? "categories-links cyber-monday" : "categories-links"
+        }
+      >
         <Link
           to={`/category/${idMainCategory}`}
           id={idMainCategory}
           onClick={handleCategory}
         >
-          {nameMainCategory} - {" "}
+          {nameMainCategory} -{" "}
         </Link>
       </div>
 
-      {cyberMonday && <div className="cyber-monday-logo"><img src={CyberMondayLogo} alt="Cyber monday logo"/></div>}
+      {cyberMonday && (
+        <div className="cyber-monday-logo">
+          <img src={CyberMondayLogo} alt="Cyber monday logo" />
+        </div>
+      )}
 
-      <div className={cyberMonday ? "products-categories-page cyber-monday" : "products-categories-page"}>
+      <div
+        className={
+          cyberMonday
+            ? "products-categories-page cyber-monday"
+            : "products-categories-page"
+        }
+      >
         {categoryProducts.length == 0 ? (
           <Loading className="loading-categories" />
         ) : (
@@ -306,10 +312,8 @@ function Category(props) {
               </select> */}
               </div>
             </div>
-          
-            <div className="products-category">
-             
 
+            <div className="products-category">
               {categoryProducts.map((product) => {
                 return (
                   <Link to={`/detail/${product._id}`}>
