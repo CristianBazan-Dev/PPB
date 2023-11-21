@@ -69,6 +69,7 @@
 /* Filters  */
 
 .filters-category {
+  display: none;
   z-index: 3;
 }
 

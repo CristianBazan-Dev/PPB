@@ -110,7 +110,7 @@ function Subcategory(props) {
       <CategoriesMenu />
 
       {subcategories.map((subcat) => {
-        if (subcat._id == idSubcategory) {
+        if (subcat._id === idSubcategory) {
           return (
             <div className="category-title">
               {categories.map((cat) => {
@@ -138,13 +138,13 @@ function Subcategory(props) {
           id={idMainCategory}
           onClick={handleCategory}
         >
-          {nameMainCategory}  `{'>'}`{" "}
-          <Link to={`/subcategory/${idSubcategory}`}>{nameSubcategory}</Link>{" "}
+          {nameMainCategory} -
+          <Link to={`/subcategory/${idSubcategory}`}>{nameSubcategory}</Link>
         </Link>
       </div>
 
       <div className="products-categories-page">
-        {categoryProducts.length == 0 ? (
+        {categoryProducts.length === 0 ? (
           <Loading className="loading-categories" />
         ) : (
           <div className="categorySelected-page">

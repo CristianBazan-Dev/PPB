@@ -1,6 +1,6 @@
 .categories-page {
   display: flex;
-  margin: auto;
+  margin: 5em;
   justify-content: space-around;
   align-items: flex-start;
   z-index: 300;

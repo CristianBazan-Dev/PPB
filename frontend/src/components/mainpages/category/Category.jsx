@@ -60,11 +60,6 @@ function Category(props) {
   // Events 
 
   const [cyberMonday, setCyberMonday] = state.categoriesAPI.cyberMonday; 
-
-  useLayoutEffect(() => {
-    window.scrollTo(0, 0);
-  });
-
   useEffect(() => {
     if (window.location.pathname == `/category/${params.id}`) {
       setCategory(`category=${params.id}`);

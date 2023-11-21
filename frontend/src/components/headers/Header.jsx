@@ -65,7 +65,6 @@ function Header(props) {
 
   const params = useParams();
 
-  console.log(allProducts)
   useEffect(() => {
 
   }, [callback, search, page]);
