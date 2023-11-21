@@ -61,7 +61,6 @@ function Subcategory(props) {
         `/api/products?limit=${page * 12}&${subcategory}&${sort}`
       );
 
-      console.log(res);
       setCategoryProducts(res.data.products);
       setResult(res.data.result);
     };
@@ -95,7 +94,7 @@ function Subcategory(props) {
     setIdSubcategory(e.target.id);
   };
 
-  console.log(idCategory);
+
 
   return (
     <div className="categories-section-page">
