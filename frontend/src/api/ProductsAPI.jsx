@@ -4,6 +4,7 @@ import axios from "axios";
 
 function ProductsAPI(props) {
   const [products, setProducts] = useState([]);
+  const [searchProducts, setSearchProducts] = useState([]); 
   const [categoryProducts, setCategoryProducts] = useState([]);
   const [offerProducts, setOfferProducts] = useState([]);
   const [phones, setPhones] = useState([]);
@@ -32,6 +33,15 @@ function ProductsAPI(props) {
 
 
   useEffect(() => {
+    const searchProducts = async () => {
+      const res = await axios.get(
+        `/api/products?title[regex]=${search}`
+      );
+      setSearchProducts(res.data.products);
+    };
+    searchProducts();
+
+
     const getProducts = async () => {
       const res = await axios.get(
         `/api/products?limit=${
@@ -112,6 +122,7 @@ function ProductsAPI(props) {
 
   return {
     products: [products, setProducts],
+    searchProducts: [searchProducts, setSearchProducts], 
     allProducts: [allProducts, setAllProducts],
     categoryProducts: [categoryProducts, setCategoryProducts],
     offerProducts: [offerProducts, setOfferProducts],

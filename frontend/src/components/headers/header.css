@@ -97,7 +97,7 @@ nav ul:nth-child(1) li:hover {
 /* Search bar  */
 .search {
   display: flex;
-  z-index: 3;
+  z-index: 400;
   width: var(--search-bar-width);
 }
 

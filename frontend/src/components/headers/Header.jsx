@@ -44,6 +44,7 @@ function Header(props) {
   const [secSubcategories, setSecSubcategories] =
     state.categoriesAPI.secSubcategories;
 
+  const [searchProducts, setSearchProducts] = state.productsAPI.searchProducts;
   const [allProducts, setAllProducts] = state.productsAPI.allProducts;
   const [resultAll, setResultAll] = state.productsAPI.resultAll;
   const [callback, setCallback] = useState(false);
@@ -55,8 +56,6 @@ function Header(props) {
 
   const [menuDeploy, setMenuDeploy] = useState(false);
 
-
-
   const [navResp, setNavResp] = useState(false);
   const [homeResp, setHomeResp] = useState(false);
   const [catNavResp, setCatNavResp] = useState(false);
@@ -66,16 +65,12 @@ function Header(props) {
   const params = useParams();
 
   useEffect(() => {
-
-  }, [callback, search, page]);
-
-  useEffect(() => {
-    const getProducts = async () => {
-      const res = await axios.get(`/api/products?title[regex]=${search}`);
-      setAllProducts(res.data.products);
-      setResultAll(res.data.result);
-    };
-    getProducts();
+    // const getProducts = async () => {
+    //   const res = await axios.get(`/api/products?title[regex]=${search}`);
+    //   setAllProducts(res.data.products);
+    //   setResultAll(res.data.result);
+    // };
+    // getProducts();
 
     if (token) {
       const getHistory = async () => {
@@ -93,7 +88,7 @@ function Header(props) {
       };
       getHistory();
     }
-  }, [token, isAdmin, isSuperAdmin, setHistory]);
+  }, [search, token, isAdmin, isSuperAdmin, setHistory]);
 
   const logoutUser = async () => {
     await axios.get("/api/users/logout");
@@ -345,18 +340,16 @@ function Header(props) {
               {startSearch && search.length >= 1 && (
                 <div className="searched-item">
                   <h4>Buscando {search}....</h4>
-                  {allProducts.map((item) => {
+                  {searchProducts.map((item) => {
                     return (
-                      <div
+                      <Link
+                        to={`/detail/${item._id}`}
                         className="finding-item"
-                        onClick={() => {
-                          redirectingProduct(item._id);
-                        }}
                         key={item._id}
                       >
                         <img src={item.images.url} alt="" />
                         <h4>{item.title}</h4>
-                      </div>
+                      </Link>
                     );
                   })}
                 </div>
