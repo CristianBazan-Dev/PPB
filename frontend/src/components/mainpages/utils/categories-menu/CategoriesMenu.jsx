@@ -66,12 +66,12 @@ function CategoriesMenu(props) {
             </div>
 
             <div className="categories-titles">
-              {/* <Link
-                to="/category/6547f8cd0b66b722b43e2de7"
+              <Link
+                to="/category/6560142575b75739dc410565"
 
               >
-                <h3 className="cyber-monday-title">Cyber Monday</h3>
-              </Link> */}
+                <h3 className="black-friday-title">BLACK FRIDAY</h3>
+              </Link>
 
               <Link to="/category/6520071d1e845ea315b735f5">
                 <h3>Electrodomésticos</h3>

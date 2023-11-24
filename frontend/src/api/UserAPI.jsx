@@ -4,7 +4,7 @@ import axios from "axios";
 function UserAPI(token) {
   const [isLogged, setIsLogged] = useState(false);
   const [isAdmin, setIsAdmin] = useState(false);
-  const [isSuperAdmin, setIsSuperAdmin] = useState(false); 
+  const [isSuperAdmin, setIsSuperAdmin] = useState(false);
   const [cart, setCart] = useState([]);
   const [history, setHistory] = useState([]);
   const [notification, setNotification] = useState(0);
@@ -22,7 +22,7 @@ function UserAPI(token) {
             headers: { Authorization: token },
           });
           setIsLogged(true);
-          res.data.role === 2 ? setIsSuperAdmin(true) : setIsSuperAdmin(false); 
+          res.data.role === 2 ? setIsSuperAdmin(true) : setIsSuperAdmin(false);
           res.data.role === 1 ? setIsAdmin(true) : setIsAdmin(false);
           setName(res.data.name);
           setEmail(res.data.email);
@@ -33,20 +33,26 @@ function UserAPI(token) {
       };
       getUser();
     }
-  }, [token]);
+
+    if(isAdmin){
+
+      const getNotifications = async () => {
+        try {
+          const res = await axios.get("/api/users/notification", {
+            headers: { Authorization: token },
+          });
+          setNotification(res.data);
+        } catch (err) {
+          alert(err.response.data.msg);
+        }
+      };
+      getNotifications();
+    }
+
+  }, [token, isAdmin]);
 
   // useEffect(() => {
-  //   const getNotifications = async () => {
-  //     try {
-  //       const res = await axios.get("/api/users/notification", {
-  //         headers: { Authorization: token },
-  //       });
-  //       setNotification(res.data);
-  //     } catch (err) {
-  //       alert(err.response.data.msg);
-  //     }
-  //   };
-  //   getNotifications();
+  //
   // });
 
   const addCart = async (product) => {
@@ -75,7 +81,7 @@ function UserAPI(token) {
   return {
     isLogged: [isLogged, setIsLogged],
     isAdmin: [isAdmin, setIsAdmin],
-    isSuperAdmin: [isSuperAdmin, setIsSuperAdmin], 
+    isSuperAdmin: [isSuperAdmin, setIsSuperAdmin],
     cart: [cart, setCart],
     addCart: addCart,
     history: [history, setHistory],

@@ -1,0 +1,114 @@
+.event-section .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 5em var(--content-m);
+  color: var(--white);
+  font-family: "Roboto", sans-serif;
+}
+
+.event-section .content .logo h1 {
+  font-size: 6em;
+  font-weight: 900;
+  text-shadow: 0 0 7px #fff, 0 0 42px rgb(0, 119, 255),
+    0 0 102px rgb(0, 81, 255), 0 0 151px #0fa;
+}
+
+.event-section .content .logo h2 {
+  text-align: center;
+  color: var(--white);
+}
+
+.event-section .content .products-container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 2em 2em;
+  align-items: center;
+  place-items: center;
+  padding: 2em;
+}
+
+.event-section .content .products-container .product-card-item {
+  box-shadow: 0 0 3px #fff, 0 0 5px rgb(0, 119, 255), 0 0 15px rgb(0, 81, 255);
+  background: #222;
+}
+
+.event-section .product-card-item .container .brand {
+  color: var(--white);
+}
+
+.event-section .product-card-item .container img {
+  filter: drop-shadow(4px 2px 4px #0fa);
+}
+
+.event-section .product-card-item .info .title {
+  color: var(--white);
+}
+
+.event-section .product-card-item .info .full-price {
+  color: var(--white);
+  text-shadow: 0 0 2px #fff, 0 0 42px rgb(0, 119, 255),
+    0 0 102px rgb(0, 81, 255), 0 0 151px #0fa;
+}
+
+.event-section .product-card-item .info .dues {
+  color: var(--white);
+}
+
+.event-section .product-card-item .product-card-button {
+  background: var(--base);
+}
+
+.event-section .product-card-item .product-card-button:hover {
+  background: #83a4ff;
+}
+
+.event-section.product-card-item .product-card-button a {
+  color: #efda00;
+}
+
+.event-section .product-card-item .product-card-button svg {
+  fill: var(--white);
+}
+
+.event-section .content button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background: #222;
+  color: var(--white);
+  padding: 10px 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 20px #000000, -2px 1px 30px #000000;
+  animation: cyberMonday 2s ease-in-out infinite alternate;
+  border: 2px solid #83eeff;
+  margin-bottom: 1em;
+  box-shadow: 0 0 7px #fff, 0 0 42px rgb(0, 119, 255),
+  0 0 102px rgb(0, 81, 255), 0 0 151px #0fa;;
+}
+
+.event-section button:hover {
+  background: #83eeff;
+  transition: 0.5s;
+}
+
+@media (max-width: 768px) {
+  .cyber-monday-section .content {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .cyber-monday-section .content .logo img {
+    max-width: 100%;
+    width: 100%;
+  }
+}

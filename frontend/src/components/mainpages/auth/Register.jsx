@@ -32,7 +32,7 @@ function Register(props) {
 
       localStorage.setItem("firstlogin", true);
 
-      window.location.href = "/login";
+      window.location.href = "/#/login";
     } catch (err) {
       alert(err.response.data.msg);
     }

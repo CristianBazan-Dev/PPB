@@ -57,15 +57,16 @@ function Category(props) {
   // Events
 
   const [cyberMonday, setCyberMonday] = state.categoriesAPI.cyberMonday;
+  const [blackFriday, setBlackFriday] = state.categoriesAPI.blackFriday;
   useEffect(() => {
     setCategory(`category=${params.id}`);
     setIdMainCategory(params.id);
     setIdCategory(params.id);
     setSubcategory("");
 
-    // if(params.id == "6547f8cd0b66b722b43e2de7"){
-    //   setCyberMonday(true)
-    // }
+    if (params.id == "6560142575b75739dc410565") {
+      setBlackFriday(true);
+    }
   }, [params.id]);
 
   const deleteProduct = async (id, public_id) => {
@@ -139,7 +140,7 @@ function Category(props) {
       {categories.map((category) => {
         if (category._id == idMainCategory) {
           return (
-            <div className="category-title">
+            <div className="category-title" style={blackFriday ? {display: "none"} : ""}>
               <div className="title">
                 <img src={Iso} alt="" />
                 <h1>{category.name}</h1>
@@ -151,7 +152,7 @@ function Category(props) {
 
       <div
         className={
-          cyberMonday ? "categories-links cyber-monday" : "categories-links"
+          blackFriday ? "categories-links black-friday" : "categories-links"
         }
       >
         <Link
@@ -159,20 +160,20 @@ function Category(props) {
           id={idMainCategory}
           onClick={handleCategory}
         >
-          {nameMainCategory} -{" "}
+          {nameMainCategory}
         </Link>
       </div>
 
-      {cyberMonday && (
-        <div className="cyber-monday-logo">
-          <img src={CyberMondayLogo} alt="Cyber monday logo" />
+      {blackFriday && (
+        <div className="black-friday-logo">
+          <h1>BLACK FRIDAY</h1>
         </div>
       )}
 
       <div
         className={
-          cyberMonday
-            ? "products-categories-page cyber-monday"
+          blackFriday
+            ? "products-categories-page black-friday"
             : "products-categories-page"
         }
       >

@@ -13,6 +13,7 @@ import CategoriesMenu from "../utils/categories-menu/CategoriesMenu";
 import Banner from "../utils/banner/Banner";
 
 import CyberMonday from "../utils/events/CyberMonday/CyberMonday"
+import BlackFriday from "../utils/events/BlackFriday/BlackFriday"
 
 import PopularCategories from "../utils/popularCategories/PopularCategories";
 import Products1 from "../utils/products-1/Products1";
@@ -66,11 +67,11 @@ function Products(props) {
       </section>
 
       {/* Events section */}
-      {/* <section className="reveal">
+      <section className="reveal">
         <Suspense fallback={<Loading />}>
-        
+        <BlackFriday/>
         </Suspense>
-      </section> */}
+      </section>
 
 
 

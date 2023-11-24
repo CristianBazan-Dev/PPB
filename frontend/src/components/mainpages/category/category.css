@@ -8,8 +8,6 @@
   width: 100%;
 }
 
-
-
 .category-title {
   background-image: url("https://res.cloudinary.com/droyfngct/image/upload/v1698767188/PPB/Backgrounds/Banner_-_Background_yfgn7e.jpg");
   background-size: 100%;
@@ -144,67 +142,162 @@
 }
 
 /* Cyber monday */
-.cyber-monday-logo{
- width: 100%;
- display: flex;
- margin: auto;
- background:  #ff3e9f;
- justify-content: center;
+.cyber-monday-logo {
+  width: 100%;
+  display: flex;
+  margin: auto;
+  background: #ff3e9f;
+  justify-content: center;
 }
-.products-categories-page.cyber-monday{
- 
+
+.black-friday-logo {
+  display: flex;
+  width: 100%;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  background: #111;
+  padding: 0 6em 6em 6em;
+}
+
+.black-friday-logo h1 {
+  color: var(--white);
+  font-size: 6em;
+  font-weight: 900;
+  text-shadow: 0 0 7px #fff, 0 0 42px rgb(0, 119, 255),
+    0 0 102px rgb(0, 81, 255), 0 0 151px #0fa;
+}
+
+.products-categories-page.cyber-monday {
   background: #ff3e9f;
 }
 
-.categories-links.cyber-monday{
+.products-categories-page.black-friday {
+  background: #111;
+}
+
+.categories-links.cyber-monday {
   background: #ff3e9f;
   margin: 0;
-  color: #EFDA00;;
-  
+  color: #efda00;
 }
-.products-categories-page.cyber-monday .filters-category{
+
+.categories-links.black-friday {
+  background: #111;
+  margin: 0;
+  color: var(--white); 
+  text-shadow: 0 0 7px #fff, 0 0 42px rgb(0, 119, 255),
+  0 0 102px rgb(0, 81, 255), 0 0 151px #0fa;
+  padding: 1em;
+}
+
+.products-categories-page.black-friday .products-category .product-card-item {
+  box-shadow: 0 0 3px #fff, 0 0 5px rgb(0, 119, 255), 0 0 15px rgb(0, 81, 255);
+  background: #222;
+}
+
+.products-categories-page.black-friday .product-card-item .container .brand {
+  color: var(--white);
+}
+
+.products-categories-page.black-friday .product-card-item .container img {
+  filter: drop-shadow(4px 2px 4px #0fa);
+}
+
+.products-categories-page.black-friday .product-card-item .info .title {
+  color: var(--white);
+}
+
+.products-categories-page.black-friday .product-card-item .info .full-price {
+  color: var(--white);
+  text-shadow: 0 0 2px #fff, 0 0 42px rgb(0, 119, 255),
+    0 0 102px rgb(0, 81, 255), 0 0 151px #0fa;
+}
+
+.products-categories-page.black-friday .product-card-item .info .dues {
+  color: var(--white);
+}
+
+.products-categories-page.black-friday .product-card-item .product-card-button {
+  background: var(--base);
+}
+
+.products-categories-page.black-friday.product-card-item .product-card-button:hover {
+  background: #83a4ff;
+}
+
+.products-categories-page.black-friday .product-card-button a {
+  color: var(--white);
+}
+
+.products-categories-page.black-friday.product-card-item .product-card-button svg {
+  fill: var(--white);
+}
+
+
+
+/* Cyber monday  */
+
+
+.products-categories-page.cyber-monday .filters-category {
   display: none;
-
 }
 
-
-
-.products-categories-page.cyber-monday .products-category .product-card-item{
-  border: 2px solid #83EEFF;
+.products-categories-page.cyber-monday .products-category .product-card-item {
+  border: 2px solid #83eeff;
   border-radius: 15px;
 }
 
-.products-categories-page.cyber-monday .products-category .product-card-item .info .title{
+.products-categories-page.cyber-monday
+  .products-category
+  .product-card-item
+  .info
+  .title {
   color: #f346ed;
   text-shadow: -2px 2px 0px #00e6e6;
-  margin-bottom: .3em;
+  margin-bottom: 0.3em;
 }
 
-.products-categories-page.cyber-monday .products-category .product-card-item .info .full-price{
+.products-categories-page.cyber-monday
+  .products-category
+  .product-card-item
+  .info
+  .full-price {
   color: var(--base);
   text-shadow: -2px 2px 0px #00e6e6;
 }
 
-.products-categories-page.cyber-monday .products-category .product-card-item .product-card-button{
-  border: 2px solid #83EEFF;
+.products-categories-page.cyber-monday
+  .products-category
+  .product-card-item
+  .product-card-button {
+  border: 2px solid #83eeff;
   border-radius: 0 0 15px 15px;
   background: #f346ed;
 }
 
-.products-categories-page.cyber-monday .products-category.product-card-item .product-card-button:hover{
-  background: #83EEFF;
+.products-categories-page.cyber-monday
+  .products-category.product-card-item
+  .product-card-button:hover {
+  background: #83eeff;
 }
 
-.products-categories-page.cyber-monday .products-category .product-card-item .product-card-button a {
-  color:#EFDA00 ;
+.products-categories-page.cyber-monday
+  .products-category
+  .product-card-item
+  .product-card-button
+  a {
+  color: #efda00;
 }
 
-.products-categories-page.cyber-monday .products-category .product-card-item .product-card-button svg {
-  fill:#EFDA00 ;
-  stroke: #EFDA00;
+.products-categories-page.cyber-monday
+  .products-category
+  .product-card-item
+  .product-card-button
+  svg {
+  fill: #efda00;
+  stroke: #efda00;
 }
-
-
 
 @media (max-width: 768px) {
   .categorySelected-page {
@@ -287,12 +380,11 @@
     margin-left: 0%;
   }
 
-
-  .cyber-monday-logo img{
+  .cyber-monday-logo img {
     width: 50%;
     display: flex;
     margin: auto;
-    background:  #ff3e9f;
+    background: #ff3e9f;
     justify-content: center;
-   }
+  }
 }

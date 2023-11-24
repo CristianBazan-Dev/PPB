@@ -79,8 +79,6 @@ function Checkout() {
     );
   };
 
-  console.log(paymentMethod);
-
   const checkoutSubmit = async (e) => {
     e.preventDefault();
     if (!paymentMethod) {
@@ -103,7 +101,7 @@ function Checkout() {
           alert(
             "Encargo realizado! Nos estaremos comunicando con usted para hacer el seguimiento de la compra."
           );
-          window.location.href = "/history  ";
+          window.location.href = "/#/history  ";
         } else if (paymentMethod == "mp") {
           const mpRes = await axios.post(`/api/payment/${paymentId}`, {
             headers: { Authorization: token },
@@ -114,7 +112,7 @@ function Checkout() {
           alert("Compra confirmada! Serás redirigido a realizar el pago");
 
           window.open(`${mpLink}`);
-          window.location.href = "/history  ";
+          window.location.href = "/#/history  ";
         }
 
         setCart([]);

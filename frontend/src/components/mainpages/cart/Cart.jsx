@@ -26,7 +26,7 @@ function Cart(props) {
 
   const addToCart = async (cart) => {
     await axios.patch(
-      "/users/addcart",
+      "/api/users/addcart",
       { cart },
       {
         headers: { Authorization: token },
@@ -78,7 +78,7 @@ function Cart(props) {
     );
 
   return (
-    <div>
+    <div className="cart-page">
       {cart.map((product) => {
         return (
           <div className="detail cart" key={product.id}>

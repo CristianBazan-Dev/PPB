@@ -80,6 +80,12 @@ text-shadow: var(--text-shadow);
 }
 
 
+.cyber-monday-section .product-card-item .dues{
+  color: var(--white);
+}
+
+
+
 
 .cyber-monday-section .product-card-item .product-card-button{
   border: 2px solid #83EEFF;
